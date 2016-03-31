@@ -179,7 +179,7 @@ $( document ).ready(function() {
     	$('.fa-map').css('color', '#e6e6e6');
     });    
 
-	$('#loading').hide();
+	$('.loader').hide();
 
 	console.log("Welcome to the 'Who Represents Me?' legislative district finder application, developed by the MN State Legislative Coordinating Commission. The application's responsive web design(RWD), open-source code can be found at 'https://github.com/Ccantey/LCC-DistrictFinder'.")
 
