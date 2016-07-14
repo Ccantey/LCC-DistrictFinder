@@ -57,7 +57,7 @@ function toggleBaseLayers(el, layer1, layer2){
 
 //fetch the overlay layers from WMS, published through FOSS mapserver (mapserver.org) - much faster than fetching large vector datasets through PGIS
 function getOverlayLayers(el, switchId){
-    $('#loading').show();
+    $('.loader').show();
 
     switchMap = {"countyonoffswitch": "cty2010", "cityonoffswitch":"mcd2015", "cononoffswitch":"cng2012", "ssonoffswitch":"sen2012_vtd2015", "shonoffswitch":"hse2012_vtd2015"}
     // console.log(typeof switchMap[switchId]);
@@ -65,7 +65,7 @@ function getOverlayLayers(el, switchId){
     if(el.is(':checked')){
     	map.removeLayer(overlayLayers[switchMap[switchId]]);
         $('.leaflet-marker-icon.'+switchMap[switchId]).hide();
-		$('#loading').hide();
+		$('.loader').hide();
     } else {
     	$('.leaflet-marker-icon.'+switchMap[switchId]).show();
 
@@ -78,17 +78,17 @@ function getOverlayLayers(el, switchId){
                 crs:L.CRS.EPSG4326,
 			    layers: switchMap[switchId]
 			}).addTo(map);
-			$('#loading').hide();
+			$('.loader').hide();
 		} else {
 			overlayLayers[switchMap[switchId]].addTo(map);
-			$('#loading').hide();
+			$('.loader').hide();
 		}
     }
 }
 
 function geoCodeAddress(geocoder, resultsMap) {
   var address = document.getElementById('geocodeAddress').value;
-  $("#loading").show();
+  $('.loader').show();
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       var precision = results[0].geometry.location_type;
@@ -106,7 +106,7 @@ function geoCodeAddress(geocoder, resultsMap) {
       geocodeFeedback(precision, components);
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
-      $('#loading').hide();
+      $('.loader').hide();
     }
   });
 }
@@ -146,7 +146,7 @@ function identifyDistrict(d){
 		lat: d.latlng.lat,
 		lng: d.latlng.lng
 	};
-    $("#loading").show();
+    $('.loader').show();
 	$.ajax("php/getPointData.php", {
 		 data: data,
 		success: function(result){			
@@ -170,35 +170,35 @@ function addMemberData(memberData){
 	    $('.memberLink').show();
 	    //add memberdata from map selection to member list
 	    //ALTERNATIVE SOLUTION! Use house/senate image server: http://www.house.leg.state.mn.us/hinfo/memberimgls89/ -- but then you have issue of large image sizes, slow performance
-	    $('#housephoto').attr('src', 'images/House/tn_'+memberData.features[0].properties.district+'.jpg').attr('width','auto').attr('height','auto');
-		$('#housemember').html(memberData.features[0].properties.name + '<span class="party"> ('+memberData.features[0].properties.party+')</span>').delay("slow").fadeIn();
+	    $('#housephoto').attr('src', 'images/House/tn_'+memberData.features[0].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'Minnesota House ' + memberData.features[0].properties.party +' '+ memberData.features[0].properties.name + ' district ' + memberData.features[0].properties.district);
+		$('#housemember').html(memberData.features[0].properties.name + '<span class="party"> ('+ memberData.features[0].properties.party +')</span>').delay("slow").fadeIn();
 		$('#housedistrict').html('MN House - ' + memberData.features[0].properties.district).delay("slow").fadeIn();
 		$('.mnhouse').attr('data-webid', 'http://www.house.leg.state.mn.us/members/members.asp?id='+ memberData.features[0].properties.memid);
 		
-		$('#senatephoto').attr('src', 'images/Senate/'+memberData.features[1].properties.district+'.jpg').attr('width','auto').attr('height','auto');
+		$('#senatephoto').attr('src', 'images/Senate/'+memberData.features[1].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'Minnesota Senate ' + memberData.features[1].properties.party +' '+ memberData.features[1].properties.name + ' district ' + memberData.features[1].properties.district);
 		$('#senatemember').html(memberData.features[1].properties.name + '<span class="party">  ('+memberData.features[1].properties.party+')</span>');
 		$('#senatedistrict').html('MN Senate - ' + memberData.features[1].properties.district);
 		$('.mnsenate').attr('data-webid', 'http://www.senate.leg.state.mn.us/members/member_bio.php?leg_id='+ memberData.features[1].properties.memid);
 		
-		$('#ushousephoto').attr('src', 'images/USHouse/US'+memberData.features[2].properties.district+'.jpg').attr('width','auto').attr('height','auto');
+		$('#ushousephoto').attr('src', 'images/USHouse/US'+memberData.features[2].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Representative ' + memberData.features[2].properties.party +' '+ memberData.features[2].properties.name + ' district ' + memberData.features[2].properties.district);
 		$('#ushousemember').html(memberData.features[2].properties.name + ' <span class="party"> ('+memberData.features[2].properties.party+')</span>');
 		$('#ushousedistrict').html('U.S. House - ' + memberData.features[2].properties.district);
 		var lastname = memberData.features[2].properties.name.split(" ")[1];
 		$('.ushouse').attr('data-webid', 'http://'+ lastname +'.house.gov/');
 		
-		$('#ussenatephoto').attr('src', 'images/USSenate/USsenate1.jpg').attr('width','auto').attr('height','auto');
+		$('#ussenatephoto').attr('src', 'images/USSenate/USsenate1.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Senator DFL Amy Klobuchar Minnesota');
 		$('#ussenatemember').html('Amy Klobuchar <span class="party"> (DFL)</span>');
 		$('#ussenatedistrict').html('U.S. Senate' );
 		$('.ussenate1').attr('data-webid', 'http://www.klobuchar.senate.gov/');
 		
-		$('#ussenatephoto2').attr('src', 'images/USSenate/USsenate2.jpg').attr('width','auto').attr('height','auto');
+		$('#ussenatephoto2').attr('src', 'images/USSenate/USsenate2.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Senator DFL Al Franken Minnesota');
 		$('#ussenatemember2').html('Al Franken <span class="party"> (DFL)</span>');
 		$('#ussenatedistrict2').html('U.S. Senate');
 		$('.ussenate2').attr('data-webid', 'http://www.franken.senate.gov/');
-		$("#loading").hide();
+		$('.loader').hide();
 	} else { 
 		$('#mask').show();
-		$('#loading').hide();
+		$('.loader').hide();
 	}	
 }
 
@@ -224,7 +224,7 @@ function addMarker(e){
 //Show the district on the map
 function showDistrict(div){
 	slideSidebar();
-	$("#loading").show();
+	$('.loader').show();
 
 	//div is the class name of the active member
 	divmap = {"mnhouse active":0, "mnsenate active":1, "ushouse active":2};
@@ -255,12 +255,12 @@ function showDistrict(div){
 	}).addTo(map);
 	//zoom to selection
 	map.fitBounds(mapDistrictsLayer.getBounds());
-	$("#loading").hide();
+	$('.loader').hide();
 }
 
 function showSenateDistrict(div){
 	slideSidebar();
-    $("#loading").show();
+    $('.loader').show();
 
 	//remove preveious district layers.
 	if (typeof mapDistrictsLayer !== "undefined" ){ 
@@ -269,7 +269,7 @@ function showSenateDistrict(div){
     
     mapDistrictsLayer = MinnesotaBoundaryLayer.addTo(map);
 	map.fitBounds(mapDistrictsLayer.getBounds());
-	$("#loading").hide();
+	$('.loader').hide();
 }
 
 function slideSidebar(){
@@ -308,7 +308,7 @@ function zoomToGPSLocation() {
 }
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
  alert('Geocode was not successful - Your browser does not support Geolocation');
-      $('#loading').hide();
+      $('.loader').hide();
 
 }
 
