@@ -26,7 +26,7 @@
     </script>
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 	<!--<script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>-->
-</head>
+
 
 <div class='leg_Col4of4-First'> <!-- Closes in footer - so leave this openended -->
 	<h2 id='map_title'>Who Represents Me?</h2>
@@ -136,7 +136,6 @@
                 <span class="center"> -- or -- </span>
 
 	    		<li>Single-click or touch the map to select a search location. </li>
-<<<<<<< HEAD
 	    	</ul>
                 <hr>
             <!-- <p><strong>On Results Tab: </strong></p> -->
@@ -151,11 +150,6 @@
 	    		        <i class="fa fa-exclamation-triangle"> </i>
 	    		        <i class="fa fa-refresh"> </i>
 	    		    </span> helpers placed around the map.</li>
-=======
-	    		<li>Select an elected official to view the official's web page/contact information.</li>
-	    		<li>Select <span class='contact'>Show District <i class="fa fa-external-link"></i></span> on member results to view the member's district boundary on the map.</li>
-	    		<li>Please note <span style="color:#a54a36; font-size:11px; padding:5px;"><i class="fa fa-info-circle"></i> Help</span> and <span style="color:#a54a36; font-size:11px; padding:5px;" class='noref' >Disclaimer <i class="fa fa-exclamation-triangle"></i> </span> below the map and <span style="color:#a54a36; font-size:11px; padding:5px;"><i class="fa fa-refresh"></i> Reset Map</span> above the map.</li>
->>>>>>> f8fca8ff486b004608413fffe9506c09fa56d236
 
 	    	</ul>
 	
