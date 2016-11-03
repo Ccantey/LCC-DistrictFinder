@@ -105,10 +105,34 @@ function geoCodeAddress(geocoder, resultsMap) {
       identifyDistrict(pos);
       geocodeFeedback(precision, components);
     } else {
-      alert('Geocode was not successful for the following reason: ' + status);
+      
+      geoCodeMBAddress(address);
       $('.loader').hide();
     }
   });
+}
+
+function geoCodeMBAddress(address){
+	L.mapbox.accessToken = 'pk.eyJ1IjoiY2NhbnRleSIsImEiOiJjaWVsdDNubmEwMGU3czNtNDRyNjRpdTVqIn0.yFaW4Ty6VE3GHkrDvdbW6g';
+    var geocoder = L.mapbox.geocoder('mapbox.places')
+    geocoder.query(address, showMapBoxMap)
+
+	return false;
+}
+
+function showMapBoxMap(err, data){
+	   var pos = {
+        latlng: {
+        	lat:data.latlng[0],
+        	lng:data.latlng[1]
+        },
+        lat:data.latlng[0],
+        lng:data.latlng[1]
+      };   
+      map.setView(L.latLng(pos.lat,pos.lng),16);
+      addMarker(pos);
+      identifyDistrict(pos);
+      //geocodeFeedback(precision, components);   
 }
 
 function geocodeFeedback(precision, components){
