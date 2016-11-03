@@ -26,7 +26,7 @@
     </script>
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 	<!--<script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>-->
-
+</head>
 
 <div class='leg_Col4of4-First'> <!-- Closes in footer - so leave this openended -->
 	<h2 id='map_title'>Who Represents Me?</h2>
