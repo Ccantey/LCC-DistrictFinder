@@ -105,8 +105,12 @@ function geoCodeAddress(geocoder, resultsMap) {
       identifyDistrict(pos);
       geocodeFeedback(precision, components);
     } else {
+<<<<<<< HEAD
       
       geoCodeMBAddress(address);
+=======
+      alert('Geocode was not successful for the following reason: ' + status);
+>>>>>>> f8fca8ff486b004608413fffe9506c09fa56d236
       $('.loader').hide();
     }
   });

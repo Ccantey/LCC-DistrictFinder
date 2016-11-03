@@ -27,12 +27,15 @@
     background-color: #eee !important;
 }
 
+<<<<<<< HEAD
 .leg_PageContent hr{
     margin:10px;
     height:1px;
     background-color: #a7a5a6;
 }
 
+=======
+>>>>>>> f8fca8ff486b004608413fffe9506c09fa56d236
 .mapboxgl-canvas-container.mapboxgl-interactive, .mapboxgl-ctrl-nav-compass{
     cursor:crosshair;
 }
@@ -231,7 +234,11 @@ ul{
 }
 
 .active{
+<<<<<<< HEAD
     background-color: rgba(165,74,54,.6);
+=======
+    background-color: rgba(153, 51, 51, 0.41);
+>>>>>>> f8fca8ff486b004608413fffe9506c09fa56d236
     border-left: 3px solid #a54a36;
     /*border-right: 3px solid #fcb228;*/
 }
@@ -326,7 +333,11 @@ ul{
 #map_help{
     font-size: 13px;
     position: absolute;
+<<<<<<< HEAD
     bottom:5px;
+=======
+    bottom:4px;
+>>>>>>> f8fca8ff486b004608413fffe9506c09fa56d236
     left:30%;
     z-index: 101;
 }
@@ -343,7 +354,11 @@ ul{
 #map_disclaimer{
     font-size: 13px;
     position: absolute;
+<<<<<<< HEAD
     bottom:5px;
+=======
+    bottom:4px;
+>>>>>>> f8fca8ff486b004608413fffe9506c09fa56d236
     right:0;
     z-index: 101;
 }
