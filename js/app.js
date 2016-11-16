@@ -105,7 +105,7 @@ function geoCodeAddress(geocoder, resultsMap) {
       identifyDistrict(pos);
       geocodeFeedback(precision, components);
     } else {
-      
+      //Backup Geocoder
       geoCodeMBAddress(address);
       $('.loader').hide();
     }
