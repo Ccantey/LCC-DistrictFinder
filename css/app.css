@@ -33,6 +33,13 @@
     background-color: #a7a5a6;
 }
 
+.leg_OfficeNavCore{
+    z-index: 3;
+}
+
+.leg_OfficeNavCore{
+    z-index: 3;
+}
 .mapboxgl-canvas-container.mapboxgl-interactive, .mapboxgl-ctrl-nav-compass{
     cursor:crosshair;
 }
@@ -298,7 +305,17 @@ ul{
     text-align: right;
     font-size: 13px;
     bottom:6px;
-    z-index: 1001;
+    z-index: 2;
+}
+#members-elect{
+    position: absolute;
+    text-align: center;
+    top:55px;
+    left:388px;
+    
+}
+#members-elect a{
+    z-index:3;
 }
 
 #map_reset .noref,#map_help .noref, #map_disclaimer .noref{

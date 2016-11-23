@@ -70,7 +70,7 @@ function getOverlayLayers(el, switchId){
     	$('.leaflet-marker-icon.'+switchMap[switchId]).show();
 
     	if(typeof overlayLayers[switchMap[switchId]] === 'undefined'){
-    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('http://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/OpenLayers/districts/data/mapserver.map', {
+    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('https://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/iMaps/districts/data/mapserver.map', {
 			    format: 'image/png',
 			    transparent: false,
 			    minZoom: 6,
@@ -158,7 +158,6 @@ function keypressInBox(e) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if (code == 13) { //Enter keycode                        
         e.preventDefault();
-        dataLayer.push({'event': 'enterKeyGeocode'});
         geoCodeAddress(geocoder, map);
     }
 };

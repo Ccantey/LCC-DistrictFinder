@@ -8,28 +8,50 @@
     <meta name="Keywords" content="state government, legislature, districts, who represents me" />
     <META name="DC.Language" content="English">
     <meta  HTTP-EQUIV="Cache-Control" content="public">
-    <link rel="stylesheet" type="text/css" href="http://www.gis.leg.mn/css/aux_css_20.css" />
-    <link rel="stylesheet" type="text/css" href="http://www.gis.leg.mn/css/leg_css_20.css" />
+
+    <!--Facebook Share customization open graph meta tags. https://developers.facebook.com/tools/debug/og/object/-->
+    <meta property="fb:app_id" content="1837822423128844" />
+    <meta property="og:url"                content="https://www.gis.leg.mn/iMaps/districts/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Who Represents Me?" />
+    <meta property="og:description"        content="Interactive map of the Minnesota State Legislature." />
+    <meta property="og:image"              content="https://www.gis.leg.mn/iMaps/districts/images/social.png" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site:id" content="@ChrisCantey">
+    <meta name="twitter:creator" content="@ChrisCantey">
+    <meta name="twitter:title" content="Who Represents Me?">
+    <meta name="twitter:description" content="Interactive map of the Minnesota State Legislature.">
+    <meta name="twitter:image" content="https://www.gis.leg.mn/iMaps/districts/images/social.png">
+
+    <link rel="stylesheet" type="text/css" href="../../css/aux_css_20.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/leg_css_20.css" />
        
 
 
-<link rel="stylesheet" type="text/css" media="print" href="http://www.gis.leg.mn/css/leg_cssprint_20.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../css/leg_cssprint_20.css" />
 </head>
 
 <body>
 <!-- Google Tag Manager -->
 <script>
-  dataLayer = [];
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1837822423128844',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WXZXH4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WXZXH4');</script>
-<!-- End Google Tag Manager -->
-<!-- End Google Tag Manager -->
+
 <!--[if lt IE 8 ]> <div class="leg_IEOld"> <![endif]-->  <!-- wrapper for <=IE7 checks -->
 
 <!-- start: mobile-specifc top header -->
@@ -473,10 +495,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- start: optional social media links -->
         <!-- [*Add/modify social media links] -->        
 	<a href="javascript:window.print();" class="leg_Print"></a>
-        <!--<a class="leg_SocialYoutube" href="#"></a>        
-        <a class="leg_SocialTwitter" href="#"></a>
-        <a class="leg_SocialFB" href="#"></a> -->
+        <!--<a class="leg_SocialYoutube" href="#"></a>  -->       
+        
         <a class="leg_SocialEmail" href="http://www.gis.leg.mn/html/staff.html"></a>
+        <a class="leg_SocialTwitter" href="http://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.gis.leg.mn%2FiMaps%2Fdistricts%2F&text=Who%20Represents%20Me?%20&hashtags=mnleg" target="_blank"></a>
+        <a id="fbBtn" class="leg_SocialFB" href="#"></a>
         <!-- end: optional social media -->
 
         <ul>
