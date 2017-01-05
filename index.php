@@ -14,9 +14,9 @@
 	<script src="js/app.js"></script>
 	<script src="js/helper.js"></script>
 	<!-- Bring over the core js from top.inc -->
-	<script type="text/javascript" src="../../css/leg_core_20.js"></script>
-	<script type="text/javascript"  src="../../css/leg_mobile_20.js"></script>
-	<script type="text/javascript" src="../../css/js/hideshow2.js"></script>
+	<script type="text/javascript" src="/js/20/leg_core_20.js"></script>
+	<script type="text/javascript"  src="/js/20/leg_mobile_20.js"></script>
+	<script type="text/javascript" src="/js/helpers/hideshow2.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
 	<link rel="stylesheet" href="css/plugins/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/app.css" />
@@ -30,7 +30,7 @@
 
 <div class='leg_Col4of4-First'> <!-- Closes in footer - so leave this openended -->
 	<h2 id='map_title'>Who Represents Me?</h2>
-	<div id="members-elect"><a class="noref" target="_blank" href="http://www.gis.leg.mn/iMaps/districts-elect2016/">Click here for 2017 members-elect</div>
+
 	<div id='map_reset'><a class='noref'>Reset Map <i class="fa fa-refresh"></i></a></div>
     <a ><div id="triangle-topright"><i class="fa fa-map fa-lg"></i></div></a>
      <div class="loader">Loading...</div>
