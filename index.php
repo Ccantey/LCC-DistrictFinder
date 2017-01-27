@@ -167,6 +167,7 @@
 			        		 <div class="memberLink"><span id="mnhouselink">Show District <i class="fa fa-external-link-square"></i></span></div>   	
 			        		<div id='housemember' class='lcc_gis_member'></div>
 			        		<div id='housedistrict' class='lcc_gis_memberdistrict'></div>
+			        		<div  class='geo_hint'> Contact Member</div>
 			        	</div>
 			        	<img id='housephoto' class='mnhouse_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""/>
 			        
@@ -178,6 +179,7 @@
 			        		<div class="memberLink"><span id="mnsenlink">Show District <i class="fa fa-external-link-square"></i></span></div>
 			        		<div id='senatemember' class='lcc_gis_member'></div>
 			        		<div id='senatedistrict' class='lcc_gis_memberdistrict'></div>
+			        		<div  class='geo_hint'> Contact Member</div>
 			        	</div>
 			        	<img id='senatephoto' class='mnsenate_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""/>
 			        
@@ -189,6 +191,7 @@
 			        		<div class="memberLink"><span id="ushouselink">Show District <i class="fa fa-external-link-square"></i></span></div>
 			        		<div id='ushousemember'  class='lcc_gis_member'></div>
 			        		<div id='ushousedistrict' class='lcc_gis_memberdistrict'></div>
+			        		<div  class='geo_hint'> Contact Member</div>
 			        	</div>
 			        	<img id='ushousephoto' class='ushouse_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""  />
 			        
@@ -200,6 +203,7 @@
 			        		<div class="memberLink"><span id="ussenatelink">Show District <i class="fa fa-external-link-square"></i></span></div>
 			        		<div id='ussenatemember' class='lcc_gis_member'></div>
 			        		<div id='ussenatedistrict' class='lcc_gis_memberdistrict'></div>
+			        		<div  class='geo_hint'> Contact Member</div>
 			        	</div>
 			        	<img id='ussenatephoto' class='ussenate1_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""  />
 			       
@@ -211,6 +215,7 @@
 			        		<div class="memberLink"><span id="ussenate2link" >Show District <i class="fa fa-external-link-square"></i></span></div>
 			        		<div id='ussenatemember2' class='lcc_gis_member'></div>
 			        		<div id='ussenatedistrict2' class='lcc_gis_memberdistrict'></div>
+			        		<div  class='geo_hint'> Contact Member</div>
 			        	</div>
 			        	<img id='ussenatephoto2' class='ussenate2_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""  />
 			        

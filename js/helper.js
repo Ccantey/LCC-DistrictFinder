@@ -53,6 +53,15 @@ $( document ).ready(function() {
     	window.open(link)
     });
 
+     // $(".geo_hint").css("color","rgba(0,0,0,0)");
+    $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).on("mouseenter",function(e){
+        //if ($(this).hasClass('active') == false){
+            $(this).find(".geo_hint").css("color","rgba(255,255,255,1)");
+        //}
+    }).on("mouseleave", function(){
+    	$(".geo_hint").css("color","rgba(0,0,0,0)");
+    })
+
 	// Members UI click turn red with 'active' class
 	$( ".memberLink" ).click(function(e) {
 		e.stopPropagation();
