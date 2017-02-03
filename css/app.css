@@ -1,6 +1,7 @@
 /*override leg css*/
 .leg_PageContent{
-    max-height: 615px;
+    max-height: 625px;
+    min-height:625px;
     font-family: arial;
     color:#3b3b3b;
     /*margin:0;*/
@@ -15,6 +16,10 @@
     border-radius:3px;
 } 
 
+.leg_PageFooter{
+    margin: 1em 0 0;
+}
+
 .leg_PageContent ul, .leg_PageContent ol {
     margin-left: 2em;
 }
@@ -22,6 +27,19 @@
     background-color: #eee !important;
 }
 
+.leg_PageContent hr{
+    margin:10px;
+    height:1px;
+    background-color: #a7a5a6;
+}
+
+.leg_OfficeNavCore{
+    z-index: 3;
+}
+
+.leg_OfficeNavCore{
+    z-index: 3;
+}
 .mapboxgl-canvas-container.mapboxgl-interactive, .mapboxgl-ctrl-nav-compass{
     cursor:crosshair;
 }
@@ -84,11 +102,14 @@
     border-left: 3px solid #a7a5a6;
 }
 #mask p{
-    margin-top: 35px;
+    margin-top: 10px;
     padding:0 10px;
 }
-#mask ol{
+#mask ul{
+    margin-top:-7px;
     font-size: 1.1em;
+    margin-left:0;
+    text-align: center;
 }
 #mask img{
     margin-left:31%;
@@ -96,7 +117,14 @@
 }
 #mask li{
         padding:7px;
-    }
+}
+
+.helpers{
+    color:#888;
+    /*margin: 15px 12px 0 -21px;*/
+    text-align: center;
+    font-size: 0.9em;
+}
 
 #map{
     width:70%;
@@ -183,7 +211,19 @@ ul{
     border-left: 3px solid #a7a5a6;
     width:282px;
 }
+.geo_hint{
+    left:80px;
+    position:relative;
+    text-align:left;
+    top:10px;
+    color: rgba(100, 100, 100, 0);
+    font-weight: bold;
+    z-index: 1001;
+    /*font-family: */
+
+}
 .mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2 {
+    position:relative;
     height:87px;
     background-color: #e6e6e6;
     border-top: 1px solid #a7a5a6;
@@ -192,14 +232,14 @@ ul{
     border-left: 3px solid #a7a5a6;
 }
 .mnhouse:hover, .mnsenate:hover, .ushouse:hover, .ussenate1:hover, .ussenate2:hover{
-    background-color: rgba(150,150,150,.41);
+    background-color: rgba(150,150,150,.51);
     border-left: 3px solid #a54a36;
     /*border-right: 3px solid #fcb228;*/
     cursor: pointer;
 }
 
 .active{
-    background-color: rgba(153, 51, 51, 0.41);
+    background-color: rgba(165,74,54,.6);
     border-left: 3px solid #a54a36;
     /*border-right: 3px solid #fcb228;*/
 }
@@ -221,7 +261,7 @@ ul{
     font-weight: bold;
     /*bottom: 80px;*/
     left:80px;
-    top:5px;
+    top:0px;
     text-align: left;
     z-index: 101;
 }
@@ -229,15 +269,15 @@ ul{
 .lcc_gis_memberdistrict{
     position: relative;
     left: 80px;
-    top:10px;
+    top:5px;
     text-align: left;
 }
 #officials img {
     height: 100%;
     min-height: 87px;
     max-width: 65%;
-    position: relative;
-    top: -55px;
+    position: absolute;
+    top: 0;
     border:none;
 }
 
@@ -264,9 +304,19 @@ ul{
 #map_reset{
     position:relative;
     text-align: right;
-    font-size: 11px;
-    bottom:8px;
-    z-index: 1001;
+    font-size: 13px;
+    bottom:6px;
+    z-index: 2;
+}
+#members-elect{
+    position: absolute;
+    text-align: center;
+    top:55px;
+    left:388px;
+    
+}
+#members-elect a{
+    z-index:3;
 }
 
 #map_reset .noref,#map_help .noref, #map_disclaimer .noref{
@@ -292,9 +342,9 @@ ul{
 }
 
 #map_help{
-    font-size: 11px;
+    font-size: 13px;
     position: absolute;
-    bottom:4px;
+    bottom:5px;
     left:30%;
     z-index: 101;
 }
@@ -309,9 +359,9 @@ ul{
 }
 
 #map_disclaimer{
-    font-size: 11px;
+    font-size: 13px;
     position: absolute;
-    bottom:4px;
+    bottom:5px;
     right:0;
     z-index: 101;
 }
@@ -422,6 +472,10 @@ ul{
     color:#8d8d8d;
 }
 
+.center{
+    /*margin-left: 87px;*/
+    color: #888;
+}
 #switchBasemap{
     position:relative;
     left:36%;
@@ -509,7 +563,7 @@ ul{
     height:100%;*/
     display:none;
     position:absolute   ;
-    bottom:20px;
+    bottom:27px;
     right:1px;
     background:rgba(0,0,0,0.75);
     /*add map position size*/
