@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
 	<!--<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>-->
 	<!-- load the header -->
@@ -14,23 +14,22 @@
 	<script src="js/app.js"></script>
 	<script src="js/helper.js"></script>
 	<!-- Bring over the core js from top.inc -->
-	<script type="text/javascript" src="/js/20/leg_core_20.js"></script>
-	<script type="text/javascript"  src="/js/20/leg_mobile_20.js"></script>
-	<script type="text/javascript" src="/js/helpers/hideshow2.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+	<script type="text/javascript" src="../../css/leg_core_20.js"></script>
+	<script type="text/javascript"  src="../../css/leg_mobile_20.js"></script>
+	<script type="text/javascript" src="../../css/js/hideshow2.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 	<link rel="stylesheet" href="css/plugins/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/app.css" />
-	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
     <!--uses Google JS APi -not geocoding API -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAPiQ_pNX0vOYz5w04VSn0WUTS_5knWOg" > 
     </script>
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 	<!--<script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>-->
-
+</head>
 
 <div class='leg_Col4of4-First'> <!-- Closes in footer - so leave this openended -->
 	<h2 id='map_title'>Who Represents Me?</h2>
-
 	<div id='map_reset'><a class='noref'>Reset Map <i class="fa fa-refresh"></i></a></div>
     <a ><div id="triangle-topright"><i class="fa fa-map fa-lg"></i></div></a>
      <div class="loader">Loading...</div>

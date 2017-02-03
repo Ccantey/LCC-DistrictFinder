@@ -10,6 +10,7 @@ $( document ).ready(function() {
 		$('#geocodeFeedback').hide();
 		$("#geocodeAddress").val('');
 		slideSidebar();
+		dataLayer.push({'event': 'mapclick'});
 	});     
 
     // on small screens
@@ -32,6 +33,7 @@ $( document ).ready(function() {
     $('#gpsButton').click(function(e){
     	e.preventDefault();
     	zoomToGPSLocation();
+    	dataLayer.push({'event': 'gps'});
     });
 
     // enter key event
@@ -40,6 +42,7 @@ $( document ).ready(function() {
     // both key and enter fire geoCodeAddress
     $('#searchButton').click(function(e){
     	e.preventDefault();
+    	dataLayer.push({'event': 'searchButton'});
     	geoCodeAddress(geocoder, map);
     })
 	
@@ -48,23 +51,16 @@ $( document ).ready(function() {
 
     $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).click(function(e) {
         var link = '';
+        dataLayer.push({'event': 'memberclick'});
         link = $(this).attr('data-webid');
     	//console.log($(this).data('webid'))
     	window.open(link)
     });
 
-     // $(".geo_hint").css("color","rgba(0,0,0,0)");
-    $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).on("mouseenter",function(e){
-        //if ($(this).hasClass('active') == false){
-            $(this).find(".geo_hint").css("color","rgba(255,255,255,1)");
-        //}
-    }).on("mouseleave", function(){
-    	$(".geo_hint").css("color","rgba(0,0,0,0)");
-    })
-
 	// Members UI click turn red with 'active' class
 	$( ".memberLink" ).click(function(e) {
 		e.stopPropagation();
+		dataLayer.push({'event': 'zoomToDistrict'});
 		var mom = $(this).parent();
 		var grandma = mom.parent();
 		var child = $(this).children();
@@ -100,6 +96,7 @@ $( document ).ready(function() {
 	$('#triangle-topright').click(function(){
   		$(this).animate({right:'-100px'},250, function(){
     		$('#map_layers').animate({right:0},250);
+    		dataLayer.push({'event': 'openLayers'});
   		});  
 	});
 
@@ -126,6 +123,7 @@ $( document ).ready(function() {
 		//console.log(typeof($(this).attr('id')));
 		var elementName = $(this).attr('id')
         getOverlayLayers($(this), $(this).attr('id'));
+        dataLayer.push({'event': 'layerToggle_'+ elementName});
 	});
 
 	//map reset
@@ -182,14 +180,6 @@ $( document ).ready(function() {
     });    
 
 	$('.loader').hide();
-
-	document.getElementById('fbBtn').onclick = function() {
-    FB.ui({
-      method: 'share',
-      display: 'popup',
-      href: 'https://www.gis.leg.mn/iMaps/districts/',
-    }, function(response){});
-  };
 
 	console.log("Welcome to the 'Who Represents Me?' legislative district finder application, developed by the MN State Legislative Coordinating Commission. The application's responsive web design(RWD), open-source code can be found at 'https://github.com/Ccantey/LCC-DistrictFinder'.")
 

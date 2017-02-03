@@ -70,7 +70,7 @@ function getOverlayLayers(el, switchId){
     	$('.leaflet-marker-icon.'+switchMap[switchId]).show();
 
     	if(typeof overlayLayers[switchMap[switchId]] === 'undefined'){
-    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('https://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/iMaps/districts/data/mapserver.map', {
+    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('http://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/OpenLayers/districts/data/mapserver.map', {
 			    format: 'image/png',
 			    transparent: false,
 			    minZoom: 6,
@@ -105,7 +105,7 @@ function geoCodeAddress(geocoder, resultsMap) {
       identifyDistrict(pos);
       geocodeFeedback(precision, components);
     } else {
-      //Backup Geocoder
+      
       geoCodeMBAddress(address);
       $('.loader').hide();
     }
@@ -158,6 +158,7 @@ function keypressInBox(e) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if (code == 13) { //Enter keycode                        
         e.preventDefault();
+        dataLayer.push({'event': 'enterKeyGeocode'});
         geoCodeAddress(geocoder, map);
     }
 };
@@ -203,25 +204,11 @@ function addMemberData(memberData){
 		$('#senatedistrict').html('MN Senate - ' + memberData.features[1].properties.district);
 		$('.mnsenate').attr('data-webid', 'http://www.senate.leg.state.mn.us/members/member_bio.php?leg_id='+ memberData.features[1].properties.memid);
 		
-		var ushouseURL = '';
-		var lastname = memberData.features[2].properties.name.split(" ")[1];
-
-        switch(memberData.features[2].properties.district){
-        	case 7:
-        	  ushouseURL = 'collinpeterson';
-        	  break;
-        	case 2:
-        	  ushouseURL = 'jasonlewis';
-        	  break;
-        	default:
-        	  ushouseURL = lastname;
-        }
-
 		$('#ushousephoto').attr('src', 'images/USHouse/US'+memberData.features[2].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Representative ' + memberData.features[2].properties.party +' '+ memberData.features[2].properties.name + ' district ' + memberData.features[2].properties.district);
 		$('#ushousemember').html(memberData.features[2].properties.name + ' <span class="party"> ('+memberData.features[2].properties.party+')</span>');
 		$('#ushousedistrict').html('U.S. House - ' + memberData.features[2].properties.district);
-		
-		$('.ushouse').attr('data-webid', 'http://'+ ushouseURL +'.house.gov/');
+		var lastname = memberData.features[2].properties.name.split(" ")[1];
+		$('.ushouse').attr('data-webid', 'http://'+ lastname +'.house.gov/');
 		
 		$('#ussenatephoto').attr('src', 'images/USSenate/USsenate1.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Senator DFL Amy Klobuchar Minnesota');
 		$('#ussenatemember').html('Amy Klobuchar <span class="party"> (DFL)</span>');
