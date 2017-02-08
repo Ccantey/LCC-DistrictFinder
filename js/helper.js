@@ -177,7 +177,19 @@ $( document ).ready(function() {
     	$('.fa-map').css('color', '#8d8d8d'); 
     }).on('mouseleave', function(){
     	$('.fa-map').css('color', '#e6e6e6');
-    });    
+    });
+
+    // $(".geo_hint").css("color","rgba(0,0,0,0)");
+    $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).on("mouseenter",function(e){
+        if ($(this).hasClass('active') == false){
+
+            $(this).find(".geo_hint").css("color","rgba(255,255,255,.90)");
+            $(this).find(".geo_hint").css('display', 'block')
+        }
+    }).on("mouseleave", function(){
+    	$(".geo_hint").css("color","rgba(0,0,0,0)");
+    	$(this).find(".geo_hint").css('display', 'none');
+    });
 
 	$('.loader').hide();
 

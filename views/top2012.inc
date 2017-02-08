@@ -3,7 +3,7 @@
     <!--Begin Copy Section-->
     <!-- I just change the meta content here rather than js later -->
     <meta charset="UTF-8" />  <!-- for html5 -->
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />  <!-- for iPad tablet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />  <!-- for iPad tablet -->
     <meta name="Description" content="Minnesota Legislature | LCC-GIS" />
     <meta name="Keywords" content="state government, legislature, districts, who represents me" />
     <META name="DC.Language" content="English">
@@ -14,6 +14,7 @@
 
 
 <link rel="stylesheet" type="text/css" media="print" href="http://www.gis.leg.mn/css/leg_cssprint_20.css" />
+
 </head>
 
 <body>
