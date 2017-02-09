@@ -16,8 +16,16 @@ function initialize(){
 
 	map = L.map("map", {
 		center: L.latLng(46.1706, -93.6678),
-		zoom: 6
+		zoom: 6,
+		dragging: !L.Browser.mobile
 	});
+    
+    
+	// if (/Mobi/.test(navigator.userAgent)) {
+ //    // mobile!
+ //    //map.dragging.disable() //also disables user scroll through map
+ //    map.options.tap = false;
+	// }
     geocoder = new google.maps.Geocoder;
 
 	vectorBasemap = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2NhbnRleSIsImEiOiJjaWVsdDNubmEwMGU3czNtNDRyNjRpdTVqIn0.yFaW4Ty6VE3GHkrDvdbW6g', {
@@ -266,6 +274,7 @@ function showDistrict(div){
 	};
     //console.log(geojson.features[divmap[div]]);
     mapDistrictsLayer = L.geoJson(geojson.features[divmap[div]], {
+    	pane:"myDistrict",
 		style:myStyle,
 		onEachFeature: function (feature, layer) {
 			var html = "";
