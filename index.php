@@ -3,9 +3,7 @@
 <html lang="en">
 <head>
 	<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+  src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
 	<!--<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>-->
 	<!-- load the header -->

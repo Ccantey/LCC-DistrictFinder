@@ -144,7 +144,7 @@ body {
 .leg_ButtonSearch {
     width:20px;
     height:20px;
-    background:transparent url(graphics/icon_search.png) no-repeat;
+    background:transparent url(/css/graphics/icon_search.png) no-repeat;
     line-height:0;
     overflow:hidden;
     border:none;
@@ -231,16 +231,16 @@ a.leg_IsLink:hover {
     padding-top:4px;
 }
 .leg_FirstNav .leg_IconLeg {
-    background-image:url(graphics/icon_cap.png);
+    background-image:url(/css/graphics/icon_cap.png);
 }
 .leg_FirstNav .leg_IconConn {
-    background-image:url(graphics/icon_social.png);
+    background-image:url(/css/graphics/icon_social.png);
 }
 .leg_FirstNav .leg_IconAbout {
-    background-image:url(graphics/icon_info.png);
+    background-image:url(/css/graphics/icon_info.png);
 }
 .leg_FirstNav .leg_IconMobile {
-    background-image:url(graphics/icon_mobile.png);
+    background-image:url(/css/graphics/icon_mobile.png);
     cursor:pointer;
 }
 
@@ -366,7 +366,7 @@ a.leg_LegNavTop_Hover {                                     /* temporarily appli
 
 .leg_Banner {
     height:100%;
-    background-image:url(graphics/Banner_hardedge_bleedright_narrow.jpg);
+    background-image:url(/css/graphics/Banner_hardedge_bleedright_narrow.jpg);
     background-repeat:no-repeat;
     font-family:georgia,serif;
     z-index:1;
@@ -408,22 +408,22 @@ a.leg_LegNavTop_Hover {                                     /* temporarily appli
     background-position:0 0;
 }
 .leg_SocialFB {
-    background-image:url(graphics/icon_sm_facebook.png);
+    background-image:url(/css/graphics/icon_sm_facebook.png);
 }
 .leg_SocialTwitter {
-    background-image:url(graphics/icon_sm_twitter.png);
+    background-image:url(/css/graphics/icon_sm_twitter.png);
 }
 .leg_SocialYoutube {
-    background-image:url(graphics/icon_sm_youtube.png);
+    background-image:url(/css/graphics/icon_sm_youtube.png);
 }
 .leg_SocialEmail {
-    background-image:url(graphics/icon_sm_email.png);
+    background-image:url(/css/graphics/icon_sm_email.png);
 }
 .leg_SocialRSS {
-    background-image:url(graphics/icon_sm_rss.png);
+    background-image:url(/css/graphics/icon_sm_rss.png);
 }
 .leg_Print {                                                
-    background-image:url(graphics/icon_sm_printer.png);
+    background-image:url(/css/graphics/icon_sm_printer.png);
 }
 a.leg_Print:hover {
     cursor:pointer;
@@ -478,7 +478,7 @@ a.leg_OfficeNavLinkonly {                                   /* Linkonly class is
 }
 a.leg_OfficeNavTop {
     margin-right:8px;
-    background:url(graphics/arrow_dropdown.png) no-repeat 100% 35%;
+    background:url(/css/graphics/arrow_dropdown.png) no-repeat 100% 35%;
 }
 a.leg_OfficeNavLinkonly:focus {
    text-decoration:underline;    
@@ -1114,7 +1114,7 @@ a.leg_OfficeNavTop_Hover {                                  /* temporarily appli
     font-size:1.2em;
     margin-right:4px;
     cursor:pointer;
-    background-image:url(graphics/accordion_arrowdown.png);
+    background-image:url(/css/graphics/accordion_arrowdown.png);
     background-position:100% 50%;
     background-repeat:no-repeat;                  
 }
@@ -1128,7 +1128,7 @@ a.leg_OfficeNavTop_Hover {                                  /* temporarily appli
 }
 
 .leg_UseMobile .leg_mobile_Accordion_Expanded {
-    background-image:url(graphics/accordion_close.png);
+    background-image:url(/css/graphics/accordion_close.png);
 }
 
 .leg_UseMobile .leg_mobile_Newline {                                   /* provide spacing between sections when switching to single column display in mobile */
@@ -1223,7 +1223,7 @@ a.leg_OfficeNavTop_Hover {                                  /* temporarily appli
     box-shadow:0 2px 2px -1px #9E9E9E;
     -moz-box-shadow:0 2px 2px -1px #9E9E9E;
     -webkit-box-shadow:0 2px 2px -1px #9E9E9E;
-    background-image:url(graphics/accordion_arrowdown.png);
+    background-image:url(/css/graphics/accordion_arrowdown.png);
     background-position:97% 50%;
     background-repeat:no-repeat;
 }
@@ -1248,7 +1248,7 @@ a.leg_OfficeNavTop_Hover {                                  /* temporarily appli
     box-shadow:none;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
-    background-image:url(graphics/accordion_close.png);                 /* swapped with arrow to indicate as collapsable */
+    background-image:url(/css/graphics/accordion_close.png);                 /* swapped with arrow to indicate as collapsable */
     background-position:97% 40%;
 }
     
@@ -1580,7 +1580,7 @@ padding-right: 15px;
 padding-top: 2px;
 border-top-left-radius:10px;
 border-top-right-radius:10px;
-behavior:url(graphics/ie-css3.htc);
+behavior:url(/css/graphics/ie-css3.htc);
 background-color: #EBEBEB;
 background-repeat: no-repeat;
 font-size:120%;
@@ -1596,7 +1596,7 @@ padding-top: 2px;
 /*border: 1px solid #8C8C8C;*/
 border-top-left-radius:10px;
 border-top-right-radius:10px;
-behavior:url(graphics/ie-css3.htc);
+behavior:url(/css/graphics/ie-css3.htc);
 background-color: white;
 background-repeat: no-repeat;
 }
@@ -1609,7 +1609,7 @@ padding-top: 2px;
 border: 1px solid #8C8C8C;
 border-top-left-radius:10px;
 border-top-right-radius:10px;
-behavior:url(graphics/ie-css3.htc);
+behavior:url(/css/graphics/ie-css3.htc);
 background-color: #990033;
 background-repeat: no-repeat;
 }
@@ -1732,7 +1732,7 @@ list-style: none;
 .navlist li 
 {
 padding-left: 10px;
-background-image: url(graphics/home.png);
+background-image: url(/css/graphics/home.png);
 background-repeat: no-repeat;
 background-position: 0 .5em;
 }
@@ -1768,7 +1768,7 @@ padding-bottom: .3em;
 .leg_Col4of4-GIS {
     float:left;
     width:100%;
-    background:url(graphics/bgtiger.jpg) no-repeat center center fixed;
+    background:url(/css/graphics/bgtiger.jpg) no-repeat center center fixed;
     background-size:1000px 800px;
     background-color: #E6E6E6;
 }
