@@ -2,11 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
 	<!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
 	<!--<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>-->
 	<!-- load the header -->
 	<?
+	// Require https
+	// YOU NEED TO ADD HTTPS TO GOOGLE API!!!!!!!!!!!!!!!!!!!!!!
+	// if ($_SERVER['HTTPS'] != "on") {
+	//     $url = "https://". $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+	//     header("Location: $url");
+	//     exit;
+	// }
 	    define('INCLUDEPATH',"views/");
 	    include(INCLUDEPATH."top2012.inc");
 
@@ -25,7 +35,7 @@
     <!--uses Google JS APi -not geocoding API -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAPiQ_pNX0vOYz5w04VSn0WUTS_5knWOg" > 
     </script>
-    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <!-- <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script> -->
 	<!--<script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>-->
 </head>
 

@@ -78,7 +78,7 @@ function getOverlayLayers(el, switchId){
     	$('.leaflet-marker-icon.'+switchMap[switchId]).show();
 
     	if(typeof overlayLayers[switchMap[switchId]] === 'undefined'){
-    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('http://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/OpenLayers/districts/data/mapserver.map', {
+    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('http://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/iMaps/districts/data/mapserver.map', {
 			    format: 'image/png',
 			    transparent: false,
 			    minZoom: 6,
@@ -272,9 +272,11 @@ function showDistrict(div){
     	"weight": 2,
     	"opacity": 0.65
 	};
+	// panes for ordering layers - turns out i don't need
+	// map.createPane('myDistrict');
     //console.log(geojson.features[divmap[div]]);
     mapDistrictsLayer = L.geoJson(geojson.features[divmap[div]], {
-    	pane:"myDistrict",
+    	// pane:"myDistrict",
 		style:myStyle,
 		onEachFeature: function (feature, layer) {
 			var html = "";
@@ -287,6 +289,7 @@ function showDistrict(div){
 	    }
 	}).addTo(map);
 	//zoom to selection
+	// map.getPane('myDistrict').style.zIndex = 650;
 	map.fitBounds(mapDistrictsLayer.getBounds());
 	$('.loader').hide();
 }

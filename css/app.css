@@ -328,7 +328,7 @@ ul{
     background-color: #725448;
     color:#e6e6e6;
     border-color:#e6e6e6;
-    padding:3px;
+    padding:5px;
     border-radius:3px;
 }
 
@@ -684,15 +684,15 @@ ul{
 }
   #map{
     /*position:absolute;*/
-    top:-630px;
+    top:-620px;
     width:99%;
     height:500px;
   }
   #triangle-topright{
-    top:91px;
+    top:101px;
   }
   #sidebar{
-    top:-22px;
+    top:-12px;
     left:-100%;
     z-index:101;
     width:100%;
@@ -717,7 +717,8 @@ ul{
 
   #toggleSidebar{
         display:block;
-        padding:5px;
+        font-size:1.2rem;
+        padding:25px;
         background-color: #3b3b3b;
         text-align:center;
         margin:0;
@@ -731,7 +732,7 @@ ul{
         text-align: center;
     }
     #map_reset{
-        bottom:-22px;
+        bottom:-28px;
     }
     #pull-out{
         border-bottom-left-radius: 0;

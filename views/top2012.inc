@@ -8,8 +8,8 @@
     <meta name="Keywords" content="state government, legislature, districts, who represents me" />
     <META name="DC.Language" content="English">
     <meta  HTTP-EQUIV="Cache-Control" content="public">
-    <link rel="stylesheet" type="text/css" href="http://www.gis.leg.mn/css/aux_css_20.css" />
-    <link rel="stylesheet" type="text/css" href="http://www.gis.leg.mn/css/leg_css_20.css" />
+    <link rel="stylesheet" type="text/css" href="css/aux_css_20.css" />
+    <link rel="stylesheet" type="text/css" href="css/leg_css_20.css" />
        
 
 
