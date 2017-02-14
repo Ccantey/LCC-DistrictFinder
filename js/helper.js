@@ -193,6 +193,14 @@ $( document ).ready(function() {
 
 	$('.loader').hide();
 
+	document.getElementById('shareBtn').onclick = function() {
+	  FB.ui({
+	    method: 'share',
+	    display: 'popup',
+	    href: 'http://www.gis.leg.mn/iMaps/districts/',
+	  }, function(response){});
+	}
+
 	console.log("Welcome to the 'Who Represents Me?' legislative district finder application, developed by the MN State Legislative Coordinating Commission. The application's responsive web design(RWD), open-source code can be found at 'https://github.com/Ccantey/LCC-DistrictFinder'.")
 
 });//end ready()

@@ -8,6 +8,23 @@
     <meta name="Keywords" content="state government, legislature, districts, who represents me" />
     <META name="DC.Language" content="English">
     <meta  HTTP-EQUIV="Cache-Control" content="public">
+
+    <meta name="author" content="Leg. Coordinating Commission GIS">
+    <!--Facebook Share customization open graph meta tags. https://developers.facebook.com/tools/debug/og/object/-->
+    <meta property="fb:app_id" content="1837822423128844" />
+    <meta property="og:url"                content="http://www.gis.leg.mn/iMaps/districts/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Who Represents Me?" />
+    <meta property="og:description"        content="Interactive map of the Minnesota Legislature." />
+    <meta property="og:image"              content="http://www.gis.leg.mn/iMaps/districts/images/Social/social.png" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site:id" content="@ChrisCantey">
+    <meta name="twitter:creator" content="@ChrisCantey">
+    <meta name="twitter:title" content="Who Represents Me?">
+    <meta name="twitter:description" content="Interactive map of the Minnesota Legislature.">
+    <meta name="twitter:image" content="http://www.gis.leg.mn/iMaps/districts/images/Social/social.png">
+
     <link rel="stylesheet" type="text/css" href="css/aux_css_20.css" />
     <link rel="stylesheet" type="text/css" href="css/leg_css_20.css" />
        
@@ -18,10 +35,26 @@
 </head>
 
 <body>
-<!-- Google Tag Manager -->
+
 <script>
-  dataLayer = [];
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1837822423128844',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
+
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WXZXH4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -472,11 +505,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- begin: office/dept specific contextual navigation -->
 <div class="leg_OfficeNav" id="leg_OfficeNav" tabindex="0">
         <!-- start: optional social media links -->
-        <!-- [*Add/modify social media links] -->        
-	<a href="javascript:window.print();" class="leg_Print"></a>
+        <!-- [*Add/modify social media links] -->
+        <a class="leg_SocialFB" id="shareBtn" href="#"></a>
+        <a class="leg_SocialTwitter" href="http://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.gis.leg.mn%2FiMaps%2Fdistricts%2F&text=Who%20represents%20Me?%20&hashtags=mnleg" target="_blank""></a>  
+	    <a href="javascript:window.print();" class="leg_Print"></a>
         <!--<a class="leg_SocialYoutube" href="#"></a>        
-        <a class="leg_SocialTwitter" href="#"></a>
-        <a class="leg_SocialFB" href="#"></a> -->
+        <a class="leg_SocialTwitter" href="#"></a>-->
+         
         <a class="leg_SocialEmail" href="http://www.gis.leg.mn/html/staff.html"></a>
         <!-- end: optional social media -->
 
