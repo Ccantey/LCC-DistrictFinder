@@ -16,14 +16,14 @@
     <meta property="og:type"               content="website" />
     <meta property="og:title"              content="Who Represents Me?" />
     <meta property="og:description"        content="Interactive map of the Minnesota Legislators." />
-    <meta property="og:image"              content="http://www.gis.leg.mn/iMaps/districts/images/Social/social.png" />
+    <meta property="og:image"              content="http://www.gis.leg.mn/iMaps/districts/images/Social/social_trans.png" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site:id" content="@ChrisCantey">
     <meta name="twitter:creator" content="@ChrisCantey">
     <meta name="twitter:title" content="Who Represents Me?">
     <meta name="twitter:description" content="Interactive map of the Minnesota Legislators.">
-    <meta name="twitter:image" content="http://www.gis.leg.mn/iMaps/districts/images/Social/social.png">
+    <meta name="twitter:image" content="http://www.gis.leg.mn/iMaps/districts/images/Social/social_trans.png">
 
     <link rel="stylesheet" type="text/css" href="css/aux_css_20.css" />
     <link rel="stylesheet" type="text/css" href="css/leg_css_20.css" />
