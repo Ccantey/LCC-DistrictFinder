@@ -663,17 +663,17 @@ ul{
   }
   .form-group input{
     position:relative;
-    left: 36px;
+    /*left: 36px;*/
     height:37px;
     font-size:1.2em;
      /* Firefox */
-        width: -moz-calc(100% - 69px);
+        width: -moz-calc(100% - 36px);
         /* WebKit */
-        width: -webkit-calc(100% - 69px);
+        width: -webkit-calc(100% - 36px);
         /* Opera */
-        width: -o-calc(100% - 69px);
+        width: -o-calc(100% - 36px);
         /* Standard */
-        width: calc(100% -69px);
+        width: calc(100% -36px);
 
   }
   #searchButton{
@@ -732,7 +732,8 @@ ul{
     }
   .popup{
         width:100%;
-        height: 83%;
+        height: 82%;
+        bottom:21px;
     }
     #geocodeFeedback{
         text-align: center;
@@ -775,7 +776,7 @@ ul{
         border-radius:2px;
     }
     .search label {
-        left: 37px;
+        /*left: 37px;*/
         position: relative;
     }
 }
