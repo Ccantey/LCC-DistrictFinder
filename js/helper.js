@@ -58,18 +58,19 @@ $( document ).ready(function() {
     });
 
 	// Members UI click turn red with 'active' class
-	$( ".memberLink" ).click(function(e) {
+	$( "#mnhouselink, #mnsenlink, #ushouselink, #ussenatelink, #ussenate2link" ).click(function(e) {
 		e.stopPropagation();
 		dataLayer.push({'event': 'zoomToDistrict'});
 		var mom = $(this).parent();
 		var grandma = mom.parent();
-		var child = $(this).children();
-		//console.log(mom);
-		//console.log(grandma);
+		var greatgrandma = grandma.parent();
+		//var child = $(this).children();
+		console.log(mom);
+		console.log($(this).id);
 		//console.log(child);
-        grandma.addClass('active').siblings().removeClass('active');
+        greatgrandma.addClass('active').siblings().removeClass('active');
         //get static minnesota geojson (faster than php)
-		if (child.is('#ussenatelink') || child.is('#ussenate2link')){
+		if (this.is('#ussenatelink') || this.is('#ussenate2link')){
 			//console.log(child);
 		  	if(typeof MinnesotaBoundaryLayer === 'undefined'){
 					$.getJSON("./data/Minnesota2015.json", function(data) {
@@ -87,7 +88,7 @@ $( document ).ready(function() {
 		  			showSenateDistrict();
 		  		}	
 		} else {
-	        showDistrict(grandma.attr('class'));
+	        showDistrict(mom.attr('class'));
 	    }
 	    
 	});

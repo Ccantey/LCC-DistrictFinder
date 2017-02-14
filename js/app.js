@@ -16,8 +16,8 @@ function initialize(){
 
 	map = L.map("map", {
 		center: L.latLng(46.1706, -93.6678),
-		zoom: 6,
-		dragging: !L.Browser.mobile
+		zoom: 6
+		// ,dragging: !L.Browser.mobile
 	});
     
     
