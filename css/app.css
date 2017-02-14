@@ -349,7 +349,7 @@ ul{
 #map_help{
     font-size: 13px;
     position: absolute;
-    bottom:5px;
+    bottom:2px;
     left:30%;
     z-index: 101;
 }
@@ -366,7 +366,7 @@ ul{
 #map_disclaimer{
     font-size: 13px;
     position: absolute;
-    bottom:5px;
+    bottom:2px;
     right:0;
     z-index: 101;
 }
@@ -568,7 +568,7 @@ ul{
     height:100%;*/
     display:none;
     position:absolute   ;
-    bottom:13px;
+    bottom:28px;
     right:1px;
     background:rgba(0,0,0,0.75);
     /*add map position size*/
@@ -649,7 +649,7 @@ ul{
 /*Begin Responsive Web Design*/
 @media screen and (max-width: 500px) {
   .leg_PageContent{
-     max-height: 645px;
+     max-height: 655px;
     }
   .search{
     background-color:white;
