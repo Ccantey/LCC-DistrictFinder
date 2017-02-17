@@ -172,7 +172,9 @@
 			        
 			        	
 			        	<div class="membersublist">
-			        		 <div class="memberLink"><span id="mnhouselink">Show District <i class="fa fa-external-link-square"></i></span></div>   	
+			        		 <div class="memberLink">
+			        		     <span id="mnhouselink">Show District <i class="fa fa-external-link-square"></i></span>
+			        		 </div>   	
 			        		<div id='housemember' class='lcc_gis_member'></div>
 			        		<div id='housedistrict' class='lcc_gis_memberdistrict'></div>
 			        		<div  class='geo_hint'> Contact Member</div>

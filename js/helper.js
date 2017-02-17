@@ -10,7 +10,6 @@ $( document ).ready(function() {
 		$('#geocodeFeedback').hide();
 		$("#geocodeAddress").val('');
 		slideSidebar();
-		dataLayer.push({'event': 'mapclick'});
 	});     
 
     // on small screens
@@ -33,7 +32,6 @@ $( document ).ready(function() {
     $('#gpsButton').click(function(e){
     	e.preventDefault();
     	zoomToGPSLocation();
-    	dataLayer.push({'event': 'gps'});
     });
 
     // enter key event
@@ -42,7 +40,6 @@ $( document ).ready(function() {
     // both key and enter fire geoCodeAddress
     $('#searchButton').click(function(e){
     	e.preventDefault();
-    	dataLayer.push({'event': 'searchButton'});
     	geoCodeAddress(geocoder, map);
     })
 	
@@ -51,7 +48,6 @@ $( document ).ready(function() {
 
     $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).click(function(e) {
         var link = '';
-        dataLayer.push({'event': 'memberclick'});
         link = $(this).attr('data-webid');
     	//console.log($(this).data('webid'))
     	window.open(link)
@@ -60,18 +56,15 @@ $( document ).ready(function() {
 	// Members UI click turn red with 'active' class
 	$( "#mnhouselink, #mnsenlink, #ushouselink, #ussenatelink, #ussenate2link" ).click(function(e) {
 		e.stopPropagation();
-		dataLayer.push({'event': 'zoomToDistrict'});
+
+		//need to color div 3 levels up
 		var mom = $(this).parent();
 		var grandma = mom.parent();
 		var greatgrandma = grandma.parent();
-		//var child = $(this).children();
-		console.log(mom);
-		console.log($(this).id);
-		//console.log(child);
+
         greatgrandma.addClass('active').siblings().removeClass('active');
         //get static minnesota geojson (faster than php)
-		if (this.is('#ussenatelink') || this.is('#ussenate2link')){
-			//console.log(child);
+		if (this.id == 'ussenatelink' || this.id == 'ussenate2link'){
 		  	if(typeof MinnesotaBoundaryLayer === 'undefined'){
 					$.getJSON("./data/Minnesota2015.json", function(data) {
 						var myStyle = {
@@ -80,15 +73,14 @@ $( document ).ready(function() {
 		    				"opacity": 0.65
 						};
 						MinnesotaBoundaryLayer = L.geoJson(data, {style:myStyle});
-		  			}).done(function(){
-		  				
+		  			}).done(function(){		  				
 		  				showSenateDistrict();
 		  			});
 		  		} else {
 		  			showSenateDistrict();
 		  		}	
 		} else {
-	        showDistrict(mom.attr('class'));
+	        showDistrict(greatgrandma.attr('class'));
 	    }
 	    
 	});
@@ -97,7 +89,6 @@ $( document ).ready(function() {
 	$('#triangle-topright').click(function(){
   		$(this).animate({right:'-100px'},250, function(){
     		$('#map_layers').animate({right:0},250);
-    		dataLayer.push({'event': 'openLayers'});
   		});  
 	});
 
@@ -124,7 +115,6 @@ $( document ).ready(function() {
 		//console.log(typeof($(this).attr('id')));
 		var elementName = $(this).attr('id')
         getOverlayLayers($(this), $(this).attr('id'));
-        dataLayer.push({'event': 'layerToggle_'+ elementName});
 	});
 
 	//map reset
