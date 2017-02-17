@@ -273,7 +273,9 @@ function showDistrict(div){
 	};
 	// panes for ordering layers - turns out i don't need
 	// map.createPane('myDistrict');
-    //console.log(geojson.features[divmap[div]]);
+    var thismember = div + ' ' + geojson.features[divmap[div]].properties.district;
+    ga('send', 'event', 'member', 'showmapdistrict', thismember);
+
     mapDistrictsLayer = L.geoJson(geojson.features[divmap[div]], {
     	// pane:"myDistrict",
 		style:myStyle,
