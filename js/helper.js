@@ -154,7 +154,8 @@ $( document ).ready(function() {
 			if (typeof layer._url === "undefined" || typeof layer.defaultWmsParams !== "undefined"){
 				map.removeLayer(layer);				
 			};	
-		});	   
+		});	
+		ga('send', 'event', 'map', 'mapreset', 'reset');   
 	});
 
 	//----- OPEN Modal
