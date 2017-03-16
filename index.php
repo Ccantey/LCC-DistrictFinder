@@ -24,15 +24,17 @@
 	<script type="text/javascript" src="../../css/leg_core_20.js"></script>
 	<script type="text/javascript"  src="../../css/leg_mobile_20.js"></script>
 	<script type="text/javascript" src="../../css/js/hideshow2.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> -->
 	<link rel="stylesheet" href="css/plugins/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/app.css" />
 	<script src="js/app.js"></script>
 	<script src="js/helper.js"></script>
-	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<!-- <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script> -->
     <!--uses Google JS APi -not geocoding API -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAPiQ_pNX0vOYz5w04VSn0WUTS_5knWOg" > 
     </script>
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
     <!-- <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script> -->
 	<!--<script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>-->
 </head>
