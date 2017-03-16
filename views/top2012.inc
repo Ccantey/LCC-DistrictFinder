@@ -30,7 +30,7 @@
        
 
 
-<link rel="stylesheet" type="text/css" media="print" href="http://www.gis.leg.mn/css/leg_cssprint_20.css" />
+<link rel="stylesheet" type="text/css" media="print" href="css/leg_cssprint_20.css" />
 
 </head>
 
@@ -73,6 +73,7 @@
 <div class="leg_mobile_TopHeader"> 
     <div class="leg_mobile_MainTitle">
         <a href="http://www.gis.leg.mn">LCC-GIS Office</a>
+        <button id='leg_PageHeader_expand'><i class="fa fa-bars" alt="Expand LCC Options"></i></button>
     </div>
     <div class="leg_mobile_MainTitle leg_mobile_Leglink">
 	<a href="http://www.leg.state.mn.us/">MN Legislature</a>

@@ -648,6 +648,9 @@ ul{
  
 /*Begin Responsive Web Design*/
 @media screen and (max-width: 500px) {
+  .leg_PageHeader{
+    display:none;
+  }
   .leg_PageContent{
      max-height: 655px;
     }
@@ -663,19 +666,32 @@ ul{
   }
   .form-group input{
     position:relative;
-    /*left: 36px;*/
+    left: 36px;
     height:37px;
     font-size:1.2em;
      /* Firefox */
-        width: -moz-calc(100% - 36px);
+        width: -moz-calc(100% - 68px);
         /* WebKit */
-        width: -webkit-calc(100% - 36px);
+        width: -webkit-calc(100% - 68px);
         /* Opera */
-        width: -o-calc(100% - 36px);
+        width: -o-calc(100% - 68px);
         /* Standard */
-        width: calc(100% -36px);
+        width: calc(100% -68px);
 
   }
+  #leg_PageHeader_expand{
+    display:block;
+    position:absolute;
+    top:13px;
+    right:15px;
+    padding:12px;
+    background-color: #990033;
+    color:white;
+    border:2px solid white;
+    border-radius:2px;
+    z-index: 1000;
+}
+
   #searchButton{
     display:block;
     position:absolute;

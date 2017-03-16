@@ -13,6 +13,11 @@ $( document ).ready(function() {
 		ga('send', 'event', 'map', 'mapclick', 'identify');
 	});     
 
+    $('#leg_PageHeader_expand').click(function(e){
+    	$('.leg_PageHeader').toggle();
+        }
+    );
+
     // on small screens
 	$('#toggleSidebar').click(function(e){
 		e.preventDefault();

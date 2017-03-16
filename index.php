@@ -120,11 +120,11 @@
     	</div>
     </div>
  <div class='search'>
-					
+					    
 						<div class='form-group'>
 							<form id='mainsearchform' onsubmit="geoCodeAddress()">
 				                <label for="geocode">Enter Address, City, State, and Zipcode</label>
-				                <!-- <button id="gpsButton"><i class="fa fa-location-arrow" alt="Zoom to GPS location"></i></button> -->
+				                <button id="gpsButton"><i class="fa fa-location-arrow" alt="Zoom to GPS location"></i></button>
 				                <input id ="geocodeAddress" type="text" name="geocode"></input>
 				                <button id="searchButton" class="searchButton" alt="Submit address"><i class="fa fa-search"></i></button>
 				                <p id="geocodeFeedback"></p>
