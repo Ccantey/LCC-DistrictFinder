@@ -108,7 +108,7 @@
         </ul>
 
         <div class="leg_FirstNavR">
-            	<form id="sitesearchform" name="sitesearchform" action="http://www.leg.state.mn.us/search.aspx" method="get">
+            	<form id="sitesearchform" name="sitesearchform" action="https://www.leg.state.mn.us/search.aspx" method="get">
                 <label for="leg_mainSearch" class="leg_Offscreen">Search the MN Legislature</label>
                 <input class="leg_DefaultText" name="mainsearch" type="text" value="Search the MN Legislature" maxlength="200" style="width: 185px;" />
                 <input id="leg_mainSearch" class="leg_ButtonSearch" value="Submit" type="submit" />
@@ -333,7 +333,7 @@
                     <ul>
                         <li><h3>House</h3></li>
                         <li>
-                            <form id="hfsearchform" name="billform" action="http://www.house.leg.state.mn.us/bills/billnum.asp" method="get">
+                            <form id="hfsearchform" name="billform" action="https://www.house.leg.state.mn.us/bills/billnum.asp" method="get">
                                 <input class="leg_DefaultText" id="Billnumber" name="Billnumber" value="Search HF" type="text" style="width: 100px;" maxlength="7" />                                
                                 <input class="leg_ButtonSearch" value="Submit" type="submit" />
                             </form>
@@ -347,7 +347,7 @@
                     <ul>
                         <li><h3>Senate</h3></li>
                         <li>
-                            <form id="sfsearchform" name="billform" action="http://www.senate.leg.state.mn.us/bills/billinf.php" method="get">
+                            <form id="sfsearchform" name="billform" action="https://www.senate.leg.state.mn.us/bills/billinf.php" method="get">
                                 <input class="leg_DefaultText" name="billnum" value="Search SF" type="text" style="width: 100px;" maxlength="7" />
                                 <input class="leg_ButtonSearch" value="Submit" type="submit" />
                             </form>
