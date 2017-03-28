@@ -1,30 +1,31 @@
-<!-- Remove the scripts from top2012.inc so that we have acces to them later -->
+<!-- Remove the scripts from top2016.inc so that we have acces to them later -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script
-  src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 	<!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
 	<!--<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>-->
+
 	<!-- load the header -->
 	<?
 	// Require https
-	// YOU NEED TO ADD HTTPS TO GOOGLE API!!!!!!!!!!!!!!!!!!!!!!
+	// YOU NEED TO ADD HTTPS TO GOOGLE API!
 	// if ($_SERVER['HTTPS'] != "on") {
 	//     $url = "https://". $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	//     header("Location: $url");
 	//     exit;
 	// }
 	    define('INCLUDEPATH',"views/");
-	    include(INCLUDEPATH."top2012.inc");
+	    include(INCLUDEPATH."top2016.inc");
 
 	?>
 	
 	<!-- Bring over the core js from top.inc -->
-	<script type="text/javascript" src="../../css/leg_core_20.js"></script>
-	<script type="text/javascript"  src="../../css/leg_mobile_20.js"></script>
-	<script type="text/javascript" src="../../css/js/hideshow2.js"></script>
+	<script type="text/javascript" src="/gis/css/leg_core_20.js"></script>
+	<script type="text/javascript"  src="/gis/css/leg_mobile_20.js"></script>
+	<script type="text/javascript" src="/gis/css/js/hideshow2.js"></script>
 	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> -->
+	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
 	<link rel="stylesheet" href="css/plugins/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/app.css" />
 	<script src="js/app.js"></script>
@@ -34,9 +35,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAPiQ_pNX0vOYz5w04VSn0WUTS_5knWOg" > 
     </script>
     <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
-    <!-- <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script> -->
-	<!--<script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>-->
+
 </head>
 
 <div class='leg_Col4of4-First'> <!-- Closes in footer - so leave this openended -->
