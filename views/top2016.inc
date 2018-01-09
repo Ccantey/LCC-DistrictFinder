@@ -23,7 +23,7 @@
     <meta name="twitter:creator" content="@ChrisCantey">
     <meta name="twitter:title" content="Who Represents Me?">
     <meta name="twitter:description" content="Interactive map of the Minnesota Legislature.">
-    <meta name="twitter:image" content="http://www.gis.leg.mn/iMaps/districts/images/Social/social.png">
+    <meta name="twitter:image" content="https://www.gis.leg.mn/iMaps/districts/images/Social/social.png">
 
     <link rel="stylesheet" type="text/css" href="css/aux_css_20.css" />
     <link rel="stylesheet" type="text/css" href="css/leg_css_20.css" />
@@ -317,7 +317,7 @@
                         <li><h3>Joint</h3></li>
                         <li><a href="http://www.commissions.leg.state.mn.us/">Joint Committees &amp; Task Forces</a></li>
                         <li><a href="http://www.leg.state.mn.us/leg/deadlines.aspx">Committee Deadlines</a></li>
-                        <li><a href="http://www.house.leg.state.mn.us/bills/confcommactivity.asp">Bills In Conference Committtee</a></li>
+                        <li><a href="http://www.house.leg.state.mn.us/bills/confcommactivity.asp">Bills In Conference Committee</a></li>
                         <li><a href="https://www.revisor.mn.gov/bin/sbs.php">Side by Side Comparisons</a></li>                        
                     </ul>
                 </div>
@@ -364,7 +364,7 @@
                         <li><a href="http://www.leg.state.mn.us/leg/legis.aspx">Bill Search &amp; Status</a></li>
                         <li><a href="http://www.house.leg.state.mn.us/leg/billsublogin.asp">MyBills</a></li>
                         <li><a href="https://www.revisor.mn.gov/bin/sbs.php">Side by Side Comparisons</a></li>
-                        <li><a href="http://www.house.leg.state.mn.us/bills/confcommactivity.asp">Bills In Conference Committtee</a></li>
+                        <li><a href="http://www.house.leg.state.mn.us/bills/confcommactivity.asp">Bills In Conference Committee</a></li>
                         <li><a href="http://www.leg.state.mn.us/lrl/vetoes/vetodetails.aspx">Vetoes</a></li>
                         <li><a href="https://www.revisor.mn.gov/laws/current/">Current Session Laws</a></li>
                     </ul> 
@@ -527,72 +527,72 @@
 <!--End Copy Section-->
 
 <li class="leg_NavItem">
-<a class="leg_OfficeNavLinkonly" href="/gis/index.html">Home</a>
+<a class="leg_OfficeNavLinkonly" href="https://ww2.gis.leg.mn/index.html">Home</a>
 <!-- accordion class is for dropdowns in mobile display -->
 </li>
 
 
 <li class="leg_NavItem">
-<h3><a class="leg_OfficeNavTop" href="/gis/hsemapdata.htm">Maps and Data</a>
+<h3><a class="leg_OfficeNavTop" href="https://ww2.gis.leg.mn/hsemapdata.htm">Maps and Data</a>
 <a class="leg_mobile_Accordion">&nbsp;</a></h3>  <!-- accordion class is for dropdowns in mobile display -->
                 
 <div class="leg_OfficeNavCore">
 <ul>
-    <li><a href="/gis/html/maps.html">Maps Page</a></li>
-    <li><a href="/gis/hsemapdata.htm">House - Maps and Data</a></li>
-    <li><a href="/gis/senmapdata.htm">Senate - Maps and Data</a></li>
-    <li><a href="/gis/cngmapdata.htm">Congress - Maps and Data</a></li>
+    <li><a href="https://ww2.gis.leg.mn/html/maps.html">Maps Page</a></li>
+    <li><a href="https://ww2.gis.leg.mn/hsemapdata.htm">House - Maps and Data</a></li>
+    <li><a href="https://ww2.gis.leg.mn/senmapdata.htm">Senate - Maps and Data</a></li>
+    <li><a href="https://ww2.gis.leg.mn/cngmapdata.htm">Congress - Maps and Data</a></li>
 </ul>
 </div>
 </li>
 
 <li class="leg_NavItem">
-<h3><a class="leg_OfficeNavTop" href="/gis/html/download.html">Data Services</a></h3>
+<h3><a class="leg_OfficeNavTop" href="https://ww2.gis.leg.mn/html/download.html">Data Services</a></h3>
 <a class="leg_mobile_Accordion">&nbsp;</a>  <!-- accordion class is for dropdowns in mobile display -->
                 
 <div class="leg_OfficeNavCore">
 <ul>
-    <li><a href="/gis/php/house.php">House District Information</a></li>
-    <li><a href="/gis/php/senate.php">Senate District Information</a></li>
-    <li><a href="/gis/php/congress.php">Congress District Information</a></li>
-    <li><a href="/gis/html/download.html">Download Data</a></li>
+    <li><a href="https://ww2.gis.leg.mn/php/house.php">House District Information</a></li>
+    <li><a href="https://ww2.gis.leg.mn/php/senate.php">Senate District Information</a></li>
+    <li><a href="https://ww2.gis.leg.mn/php/congress.php">Congress District Information</a></li>
+    <li><a href="https://ww2.gis.leg.mn/html/download.html">Download Data</a></li>
 </ul>
 </div>
 </li>
 
 <li class="leg_NavItem">
-<h3><a class="leg_OfficeNavTop" href="/gis/html/maps.html">Map Services</a></h3>
+<h3><a class="leg_OfficeNavTop" href="https://ww2.gis.leg.mn/html/maps.html">Map Services</a></h3>
 <a class="leg_mobile_Accordion">&nbsp;</a>  <!-- accordion class is for dropdowns in mobile display -->
                 
 <div class="leg_OfficeNavCore">
 <ul>
-    <li><a href="/gis/iMaps/districts/">Who Represents Me</a></li>
-    <li><a href="/gis/iMaps/schooldistricts/">School District Finder</a></li>
-    <li><a href="/gis/iMaps/precincts/">Precinct Finder</a></li>
-    <li><a href="/gis/html/maps.html">More...</a></li>
+    <li><a href="https://ww2.gis.leg.mn/iMaps/districts/">Who Represents Me</a></li>
+    <li><a href="https://ww2.gis.leg.mn/iMaps/schooldistricts/">School District Finder</a></li>
+    <li><a href="https://ww2.gis.leg.mn/iMaps/precincts/">Precinct Finder</a></li>
+    <li><a href="https://ww2.gis.leg.mn/html/maps.html">More...</a></li>
 </ul>
 </div>
 </li>
 
 <li class="leg_NavItem">
-<h3><a class="leg_OfficeNavTop" href="/gis/html/redistricting.html">Redistricting</a></h3>
+<h3><a class="leg_OfficeNavTop" href="https://ww2.gis.leg.mn/html/redistricting.html">Redistricting</a></h3>
 <a class="leg_mobile_Accordion">&nbsp;</a>  <!-- accordion class is for dropdowns in mobile display -->
                 
 <div class="leg_OfficeNavCore">
 <ul>
     <li><h4>Redistricting Plans</h4></li>
-    <li><a href="/gis/redist2010/plans.php?plname=L2012&pltype=court">2012 Legislative Districts</a></li>
-    <li><a href="/gis/redist2010/cong10.php?name=C2012&pltype=court">2012 Congressional Districts</a></li>
-<li><a href="/gis/html/mcplans2013.html">2013 Metropolitan Council</a></li>
+    <li><a href="https://ww2.gis.leg.mn/redist2010/plans.php?plname=L2012&pltype=court">2012 Legislative Districts</a></li>
+    <li><a href="https://ww2.gis.leg.mn/redist2010/cong10.php?name=C2012&pltype=court">2012 Congressional Districts</a></li>
+<li><a href="https://ww2.gis.leg.mn/html/mcplans2013.html">2013 Metropolitan Council</a></li>
     <!--<li><a href="http://www.gis.leg.mn/html/leg02.html">2002 Legislative Districts</a></li>
     <li><a href="http://www.gis.leg.mn/html/cong02.html">2002 Congressional Districts</a></li> -->
 </ul>
 <ul>
     <li><h4>Redistricting Pages</h4></li>
-    <li><a href="/gis/html/redistricting.html">2020 Redistricting</a></li>
-    <li><a href="/gis/html/redistricting2010.html">2010 Redistricting</a></li>
-    <li><a href="/gis/html/redistricting2000.html">2000 Redistricting</a></li>
-    <li><a href="/gis/html/redistricting1990.html">1990 Redistricting</a></li>
+    <li><a href="https://ww2.gis.leg.mn/html/redistricting.html">2020 Redistricting</a></li>
+    <li><a href="https://ww2.gis.leg.mn/html/redistricting2010.html">2010 Redistricting</a></li>
+    <li><a href="https://ww2.gis.leg.mn/html/redistricting2000.html">2000 Redistricting</a></li>
+    <li><a href="https://ww2.gis.leg.mn/html/redistricting1990.html">1990 Redistricting</a></li>
 </ul>
 </div>
 </li>   
@@ -603,7 +603,7 @@
                 
 <div class="leg_OfficeNavCore">
 <ul>
-    <li><a href="/gis/html/about.html">About</a></li>
+    <li><a href="https://ww2.gis.leg.mn/html/about.html">About</a></li>
     <li><a href="http://www.lcc.leg.mn/staff.html">Contact Us</a></li>
 <li><a href="http://www.lcc.leg.mn/">LCC Home Page</a></li>
 </div>

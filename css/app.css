@@ -140,7 +140,10 @@
     cursor:crosshair;
 }
 .loader {
-  margin: 27% 0 0 60%;
+  margin: auto;
+  margin-top:70%;
+  left:0;
+  right:0;
   font-size: 10px;
   position: absolute;
   z-index: 1005;

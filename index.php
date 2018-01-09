@@ -21,9 +21,9 @@
 	?>
 	
 	<!-- Bring over the core js from top.inc -->
-	<script type="text/javascript" src="/gis/css/leg_core_20.js"></script>
-	<script type="text/javascript"  src="/gis/css/leg_mobile_20.js"></script>
-	<script type="text/javascript" src="/gis/css/js/hideshow2.js"></script>
+	<script type="text/javascript" src="https://ww2.gis.leg.mn/css/leg_core_20.js"></script>
+	<script type="text/javascript"  src="https://ww2.gis.leg.mn/css/leg_mobile_20.js"></script>
+	<script type="text/javascript" src="https://ww2.gis.leg.mn/css/js/hideshow2.js"></script>
 	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> -->
 	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
 	<link rel="stylesheet" href="css/plugins/css/font-awesome.min.css" />
