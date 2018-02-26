@@ -78,7 +78,7 @@ function getOverlayLayers(el, switchId){
     	$('.leaflet-marker-icon.'+switchMap[switchId]).show();
 
     	if(typeof overlayLayers[switchMap[switchId]] === 'undefined'){
-    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('http://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/iMaps/districts/data/mapserver.map', {
+    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('https://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/iMaps/districts/data/mapserver.map', {
 			    format: 'image/png',
 			    transparent: false,
 			    minZoom: 6,
