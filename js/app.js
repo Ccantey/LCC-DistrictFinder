@@ -240,7 +240,7 @@ function addMemberData(memberData){
 		$('#ussenatephoto2').attr('src', 'images/USSenate/USsenate2.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Senator DFL Tina Smith Minnesota');
 		$('#ussenatemember2').html('Tina Smith <span class="party"> (DFL)</span>');
 		$('#ussenatedistrict2').html('U.S. Senate');
-		$('.ussenate2').attr('data-webid', 'https://www.senate.gov/senators/115thCongress/Smith_Tina.htm');
+		$('.ussenate2').attr('data-webid', 'https://www.smith.senate.gov/HomePage');
 		$('.loader').hide();
 	} else { 
 		$('#mask').show();

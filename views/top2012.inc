@@ -223,7 +223,7 @@
                         <li><a href="http://www.lccmr.leg.mn/">Legislative-Citizen Commission on MN Resources (LCCMR)</a></li>
                         <li><a href="http://www.lcpr.leg.mn/">Legislative Commission on Pensions &amp; Retirement (LCPR)</a></li>                    
                         <li><a href="http://www.lsohc.leg.mn/">Lessard-Sams Outdoor Heritage Council</a></li>
-                        <li><a href="http://www.legacy.leg.mn/">Legacy Amendment</a></li>      
+                        <li><a href="http://www.legacy.mn.gov/">Legacy Amendment</a></li>      
                         <li><a href="http://www.commissions.leg.state.mn.us/">More...</a></li>
                     </ul>
                 </div>
