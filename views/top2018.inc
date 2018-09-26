@@ -32,26 +32,29 @@
     <meta name="twitter:image" content="https://www.gis.leg.mn/iMaps/districts/images/Social/social2.png">
 
   <link href="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+
   <!-- LNET compiled SASS -->
   <link href="https://ww2.gis.leg.mn/iMaps/bootstrap4/styles/css/app.css" rel="stylesheet">
   <!-- jQuery needs to load before Bootstrap JS. -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+
   <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/getParameterByName.js"></script>
   <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/calendar.js"></script>
   <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/navbarhelper.js"></script>
   <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/bootstrapWindowHelper.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
-    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> -->
-  <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
-  <link rel="stylesheet" href="css/app.css" />
-  <script src="js/app.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" /> -->
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/map.js"></script>
   <script src="js/helper.js"></script>
-  <!-- <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script> -->
+  <!-- <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script> -->
     <!--uses Google JS APi -not geocoding API -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAPiQ_pNX0vOYz5w04VSn0WUTS_5knWOg" > 
   </script>
-  <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
 
   <title>LCC-GIS</title>
   </head>

@@ -1,0 +1,100 @@
+<!--#include virtual="views/top2018.inc"-->
+<!-- Main Content -->
+<div id="legContainerMain" class="container-fluid py-0">
+		<div class="row">
+		<div class="col-md-3">
+			<div class='search position-absolute shadow-sm  bg-light rounded'>
+				<div class='form-group'>
+					<form id='mainsearchform' onsubmit="geoCodeAddress()">
+						<label for="geocode">Enter Address, City, State, and Zipcode</label>
+						<button id="gpsButton"><i class="fa fa-location-arrow" alt="Zoom to GPS location"></i></button>
+						<input id ="geocodeAddress" type="text" name="geocode"></input>
+						<button id="searchButton" class="searchButton" alt="Submit address"><i class="fa fa-search"></i></button>
+						<p id="geocodeFeedback"></p>
+					</form>
+				</div>
+			</div>
+
+			<div id="sidebar" class='position-absolute'>
+				<div id="toggleSidebar">Go to Map <i class="fa fa-chevron-right"></i></div>
+				<div id="mask" class="bg-light"> 
+					<div id="pull-in">
+						<i class="fa fa-chevron-left"> </i>
+					</div>
+					<p><strong>Get Started: </strong></p>
+					<ul>
+						<li>For best results, enter a complete Minnesota address.</li>
+						<span class="center"> -- or -- </span>
+
+						<li>Single-click or touch the map to select a search location. </li>
+					</ul>
+					<hr>
+					<ul>
+						<li class="helpers">Please note the 
+							<span style="color:#a54a36; font-size:11px; padding:5px;">
+								<i class="fa fa-info-circle"> </i>
+								<i class="fa fa-exclamation-triangle"> </i>
+								<i class="fa fa-refresh"> </i>
+							</span> helpers placed around the map.</li>
+						</ul>
+					</div>
+
+					<div id="officials">
+						<div class='mnhouse'>
+							<div class="membersublist">
+								<div class="memberLink">
+									<span id="mnhouselink">Show District <i class="fas fa-map-marker-alt"></i></span>
+								</div>   	
+								<div id='housemember' class='lcc_gis_member'></div>
+								<div id='housedistrict' class='lcc_gis_memberdistrict'></div>
+								<div  class='geo_hint'> Contact Member</div>
+							</div>
+							<img id='housephoto' class='mnhouse_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""/>
+						</div>
+						<div class='mnsenate'>
+							<div class="membersublist">
+								<div class="memberLink"><span id="mnsenlink">Show District <i class="fas fa-map-marker-alt"></i></span></div>
+								<div id='senatemember' class='lcc_gis_member'></div>
+								<div id='senatedistrict' class='lcc_gis_memberdistrict'></div>
+								<div  class='geo_hint'> Contact Member</div>
+							</div>
+							<img id='senatephoto' class='mnsenate_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""/>
+						</div>
+						<div class='ushouse'>
+							<div class="membersublist">
+								<div class="memberLink"><span id="ushouselink">Show District <i class="fas fa-map-marker-alt"></i></span></div>
+								<div id='ushousemember'  class='lcc_gis_member'></div>
+								<div id='ushousedistrict' class='lcc_gis_memberdistrict'></div>
+								<div  class='geo_hint'> Contact Member</div>
+							</div>
+							<img id='ushousephoto' class='ushouse_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""  />
+						</div>
+						<div class='ussenate1'>
+							<div class="membersublist">
+								<div class="memberLink"><span id="ussenatelink">Show District <i class="fas fa-map-marker-alt"></i></span></div>
+								<div id='ussenatemember' class='lcc_gis_member'></div>
+								<div id='ussenatedistrict' class='lcc_gis_memberdistrict'></div>
+								<div  class='geo_hint'> Contact Member</div>
+							</div>
+							<img id='ussenatephoto' class='ussenate1_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""  />
+						</div>
+						<div class='ussenate2'>
+							<div class="membersublist">
+								<div class="memberLink"><span id="ussenate2link" >Show District <i class="fas fa-map-marker-alt"></i></span></div>
+								<div id='ussenatemember2' class='lcc_gis_member'></div>
+								<div id='ussenatedistrict2' class='lcc_gis_memberdistrict'></div>
+								<div  class='geo_hint'> Contact Member</div>
+							</div>
+							<img id='ussenatephoto2' class='ussenate2_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""  />
+						</div>
+					</div>
+				</div>			
+		</div>
+
+	</div>
+	<div id="map"></div>
+
+</div>
+
+
+<!--#include virtual="views/footer2018.inc"-->

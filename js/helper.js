@@ -187,7 +187,7 @@ $( document ).ready(function() {
     // $(".geo_hint").css("color","rgba(0,0,0,0)");
     $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).on("mouseenter",function(e){
         //if ($(this).hasClass('active') == false){
-
+            console.log('enetered' + $(this).find(".geo_hint"))
             $(this).find(".geo_hint").css("color","rgba(255,255,255,.90)");
             $(this).find(".geo_hint").css('display', 'block')
         //}
@@ -198,7 +198,7 @@ $( document ).ready(function() {
 
 	$('.loader').hide();
 
-	document.getElementById('shareBtn').onclick = function() {
+	$('#shareBtn').on('click', function() {
 		ga('send', 'event', 'socialmedia', 'facebook', 'click');
 
 	  FB.ui({
@@ -206,7 +206,7 @@ $( document ).ready(function() {
 	    display: 'popup',
 	    href: 'http://www.gis.leg.mn/iMaps/districts/',
 	  }, function(response){});
-	};
+	});
 
 	$('.leg_SocialTwitter').click(function(){
 		ga('send', 'event', 'socialmedia', 'twitter', 'click');
