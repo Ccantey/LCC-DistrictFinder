@@ -178,7 +178,7 @@ function identifyDistrict(d){
 		lng: d.latlng.lng
 	};
     $('.loader').show();
-	$.ajax("php/getPointData.php", {
+	$.ajax("php/getPointData2018.php", {
 		 data: data,
 		success: function(result){			
 			addMemberData(result);

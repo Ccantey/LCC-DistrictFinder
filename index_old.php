@@ -21,15 +21,15 @@
 	?>
 	
 	<!-- Bring over the core js from top.inc -->
-	<script type="text/javascript" src="https://ww2.gis.leg.mn/css/leg_core_20.js"></script>
-	<script type="text/javascript"  src="https://ww2.gis.leg.mn/css/leg_mobile_20.js"></script>
-	<script type="text/javascript" src="https://ww2.gis.leg.mn/css/js/hideshow2.js"></script>
+	<script type="text/javascript" src="https://www.gis.leg.mn/css/leg_core_20.js"></script>
+	<script type="text/javascript"  src="https://www.gis.leg.mn/css/leg_mobile_20.js"></script>
+	<script type="text/javascript" src="https://www.gis.leg.mn/css/js/hideshow2.js"></script>
 	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> -->
 	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
 	<link rel="stylesheet" href="css/plugins/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="css/app.css" />
-	<script src="js/app.js"></script>
-	<script src="js/helper.js"></script>
+	<link rel="stylesheet" href="css/app_old.css" />
+	<script src="js/app_old.js"></script>
+	<script src="js/helper_old.js"></script>
 	<!-- <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script> -->
     <!--uses Google JS APi -not geocoding API -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAPiQ_pNX0vOYz5w04VSn0WUTS_5knWOg" > 
