@@ -12,31 +12,21 @@ var geocoder = null;
 
 //Set initial basemap with initialize() - called in helper.js
 function initialize(){
-	// $("#map").height('544px');
-	geocoder = new google.maps.Geocoder;
-	
-	if (/Mobi/.test(navigator.userAgent)) {
-		screensize = true;
-	} else {screensize = false;}
+	$("#map").height('544px');
 
 	map = L.map("map", {
-		center: getCenter(),
-		dragging: !L.Browser.mobile,
-		zoom: 6,
-		gestureHandling:screensize
+		center: L.latLng(46.1706, -93.6678),
+		zoom: 6
 		// ,dragging: !L.Browser.mobile
 	});
-
-	//if you want to open up map on user location...
-    // map.locate({setView: true, maxZoom: 16});
     
-	if (/Mobi/.test(navigator.userAgent)) {
-	    // mobile!
-	    map.dragging.disable() //also disables user scroll through map
-	    map.options.tap = false;
-	    map.locate({setView: true, maxZoom: 16});
-	}
     
+	// if (/Mobi/.test(navigator.userAgent)) {
+ //    // mobile!
+ //    //map.dragging.disable() //also disables user scroll through map
+ //    map.options.tap = false;
+	// }
+    geocoder = new google.maps.Geocoder;
 
 	vectorBasemap = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2NhbnRleSIsImEiOiJjaWVsdDNubmEwMGU3czNtNDRyNjRpdTVqIn0.yFaW4Ty6VE3GHkrDvdbW6g', {
 					maxZoom: 18,
@@ -46,7 +36,7 @@ function initialize(){
 						'Legislative data &copy; <a href="http://www.gis.leg.mn/">LCC-GIS</a>, ' +
 						'Imagery Â© <a href="http://mapbox.com">Mapbox</a>',
 					id: 'mapbox.streets'
-					})
+					}).addTo(map);
 
 	streetsBasemap = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2NhbnRleSIsImEiOiJjaWVsdDNubmEwMGU3czNtNDRyNjRpdTVqIn0.yFaW4Ty6VE3GHkrDvdbW6g', {
 					maxZoom: 18,
@@ -56,20 +46,10 @@ function initialize(){
 						'Legislative data &copy; <a href="http://www.gis.leg.mn/">LCC-GIS</a>, ' +
 						'Imagery Â© <a href="http://mapbox.com">Mapbox</a>',
 					id: 'mapbox.streets-satellite'
-					});
+					})
 
 	toggleBaseLayers($('#satellitonoffswitch'),vectorBasemap,streetsBasemap);
 };
-
-//get the center of the map on load, from URL or default
-function getCenter(){
-    if (getQueryVariable('address')){
-         getQueryVariable('address');
-    } else {
-        var center = L.latLng(46.1706, -94.9678);
-        return center;
-    }
-}
 
 //toggle basemap layers
 function toggleBaseLayers(el, layer1, layer2){
@@ -114,15 +94,11 @@ function getOverlayLayers(el, switchId){
     }
 }
 
-function geoCodeAddress(geocoder, resultsMap, address) {
-  // var address = document.getElementById('geocodeAddress').value;
-  // console.log(address)
+function geoCodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('geocodeAddress').value;
   $('.loader').show();
-
   geocoder.geocode({'address': address}, function(results, status) {
-  	
     if (status === google.maps.GeocoderStatus.OK) {
-    	// console.log(address)
       var precision = results[0].geometry.location_type;
       var components = results[0].address_components;
       var pos = {
@@ -136,7 +112,6 @@ function geoCodeAddress(geocoder, resultsMap, address) {
       addMarker(pos);
       identifyDistrict(pos);
       geocodeFeedback(precision, components);
-      console.log("used google")
     } else {
       
       geoCodeMBAddress(address);
@@ -146,7 +121,6 @@ function geoCodeAddress(geocoder, resultsMap, address) {
 }
 
 function geoCodeMBAddress(address){
-	console.log('used mb')
 	L.mapbox.accessToken = 'pk.eyJ1IjoiY2NhbnRleSIsImEiOiJjaWVsdDNubmEwMGU3czNtNDRyNjRpdTVqIn0.yFaW4Ty6VE3GHkrDvdbW6g';
     var geocoder = L.mapbox.geocoder('mapbox.places')
     geocoder.query(address, showMapBoxMap)
@@ -171,17 +145,16 @@ function showMapBoxMap(err, data){
 
 function geocodeFeedback(precision, components){
 	//console.log(precision, 'location, center of ', components[0].types[0]);
-	$('#geocodeFeedback').removeClass();
 	var message = "";
 	var componentMap = {"street_number": "street", "postal_code": "zip code", "administrative_area_level_1": "state", "locality": "city", "administrative_area_level_2": "county", "route": "route", "intersection": "intersection", "political": "political division", "country": "country","administrative_area_level_3": "minor civil division", "administrative_area_level_4": 'minor civil division', "administrative_area_level_5": "minor civil division", "colloquial_area": "country", "neighborhood": "neighborhood", "premise": "building", "subpremise": "building", "natural_feature": "natural feature", "airport": "airport", "park": "park", "point_of_interest": "point of interest"};
 
 	if (precision == "ROOFTOP"){
 		message = "Address match!";
-		$('#geocodeFeedback').html(message).addClass('text-success');
+		$('#geocodeFeedback').html(message).css('color', 'green');
 		$('#geocodeFeedback').show();
 	} else {
 		message = "Approximate location! Center of " + componentMap[components[0].types[0]];
-		$('#geocodeFeedback').html(message).addClass('text-danger');
+		$('#geocodeFeedback').html(message).css('color', 'red');
 		$('#geocodeFeedback').show();
 	}
 	slideSidebar();
@@ -193,8 +166,7 @@ function keypressInBox(e) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if (code == 13) { //Enter keycode                        
         e.preventDefault();
-        address = document.getElementById('geocodeAddress').value;
-        geoCodeAddress(geocoder, map, address);
+        geoCodeAddress(geocoder, map);
     }
 };
 
@@ -229,17 +201,16 @@ function addMemberData(memberData){
 	    $('.memberLink').show();
 	    //add memberdata from map selection to member list
 	    //ALTERNATIVE SOLUTION! Use house/senate image server: http://www.house.leg.state.mn.us/hinfo/memberimgls89/ -- but then you have issue of large image sizes, slow performance
-	    $('#housephoto').attr('src', 'images/House/'+memberData.features[0].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'Minnesota House ' + memberData.features[0].properties.party +' '+ memberData.features[0].properties.name + ' district ' + memberData.features[0].properties.district);
+	    $('#housephoto').attr('src', 'images/House/tn_'+memberData.features[0].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'Minnesota House ' + memberData.features[0].properties.party +' '+ memberData.features[0].properties.name + ' district ' + memberData.features[0].properties.district);
 		$('#housemember').html(memberData.features[0].properties.name + '<span class="party"> ('+ memberData.features[0].properties.party +')</span>').delay("slow").fadeIn();
 		$('#housedistrict').html('MN House - ' + memberData.features[0].properties.district).delay("slow").fadeIn();
 		$('#mnhouselink').attr('href', 'http://www.house.leg.state.mn.us/members/members.asp?id='+ memberData.features[0].properties.memid);
-		$('#mnhouselink').attr('title', 'Contact '+ memberData.features[0].properties.name);
 		
 		$('#senatephoto').attr('src', 'images/Senate/'+memberData.features[1].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'Minnesota Senate ' + memberData.features[1].properties.party +' '+ memberData.features[1].properties.name + ' district ' + memberData.features[1].properties.district);
 		$('#senatemember').html(memberData.features[1].properties.name + '<span class="party">  ('+memberData.features[1].properties.party+')</span>');
 		$('#senatedistrict').html('MN Senate - ' + memberData.features[1].properties.district);
 		$('#mnsenlink').attr('href', 'http://www.senate.leg.state.mn.us/members/member_bio.php?leg_id='+ memberData.features[1].properties.memid);
-		$('#mnsenlink').attr('title', 'Contact '+ memberData.features[1].properties.name);
+		
 
 		var ushouseURL = '';
 		var lastname = memberData.features[2].properties.name.split(" ")[1];
@@ -248,9 +219,9 @@ function addMemberData(memberData){
         	case 7:
         	  ushouseURL = 'collinpeterson';
         	  break;
-        	// case 2:
-        	//   ushouseURL = 'jasonlewis';
-        	//   break;
+        	case 2:
+        	  ushouseURL = 'jasonlewis';
+        	  break;
         	default:
         	  ushouseURL = lastname;
         }
@@ -260,19 +231,16 @@ function addMemberData(memberData){
 		$('#ushousedistrict').html('U.S. House - ' + memberData.features[2].properties.district);
 		var lastname = memberData.features[2].properties.name.split(" ")[1];
 		$('#ushouselink').attr('href', 'http://'+ ushouseURL +'.house.gov/');
-		$('#ushouselink').attr('title', 'Contact '+ memberData.features[2].properties.name);
 		
 		$('#ussenatephoto').attr('src', 'images/USSenate/USsenate1.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Senator DFL Amy Klobuchar Minnesota');
 		$('#ussenatemember').html('Amy Klobuchar <span class="party"> (DFL)</span>');
 		$('#ussenatedistrict').html('U.S. Senate' );
-		$('#ussenatelink').attr('href', 'http://www.klobuchar.senate.gov/');
-		$('#ussenatelink').attr('title', 'Contact Amy Klobuchar');
+		$('.ussenate1').attr('href', 'http://www.klobuchar.senate.gov/');
 		
 		$('#ussenatephoto2').attr('src', 'images/USSenate/USsenate2.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Senator DFL Tina Smith Minnesota');
 		$('#ussenatemember2').html('Tina Smith <span class="party"> (DFL)</span>');
 		$('#ussenatedistrict2').html('U.S. Senate');
-		$('#ussenate2link').attr('href', 'https://www.smith.senate.gov/HomePage');
-		$('#ussenate2link').attr('title', 'Contact Tina Smith');
+		$('.ussenate2').attr('href', 'https://www.smith.senate.gov/HomePage');
 		$('.loader').hide();
 	} else { 
 		$('#mask').show();
@@ -360,38 +328,19 @@ function slideSidebar(){
 	if ($('#sidebar').hasClass('animate')){
 			$('#sidebar').removeClass('animate');
 			try{
-			   // $('#sidebar').animate({ 'left': '-105%' }, 250, 'easeOutQuad');
+			   $('#sidebar').animate({ 'left': '-100%' }, 500, 'easeOutQuad');
 			}
 			catch(err){}
 		} else {
 			try{
 			    $('#sidebar').addClass('animate');
-			    // $('#sidebar').animate({ 'left': '0px' }, 250, 'easeInQuad');
+			    $('#sidebar').animate({ 'left': '0px' }, 500, 'easeInQuad');
 		    } catch(err){}} // Firebug throws a typeerror here - it doesn't break the app, 'easeInQuad' needs jQuery UI, but it forces the animation in desktop app... just ignore
-}
-
-//call getQueryVariable('district' or 'address', whatever variable you want to pass through url)
-//example: http://www.gis.leg.mn/iMaps/Legacy/index.php?address=1414 Skyline Rd, Eagan
-function getQueryVariable(variable){
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       //console.log(vars);
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){
-                address = pair[1].replace(/%20/g,' ');
-                // console.log(address)
-                geoCodeAddress(geocoder, map, address);
-                $('#geocodeAddress').val(address);
-                return address;
-            }
-       }
-       return(false);
 }
 
 function zoomToGPSLocation() {
 // Try HTML5 geolocation.
-  if ("geolocation" in navigator) {
+  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
         latlng: {lat:position.coords.latitude,lng:position.coords.longitude},

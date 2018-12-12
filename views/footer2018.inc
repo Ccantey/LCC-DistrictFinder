@@ -14,12 +14,11 @@
                   <li>
                     <a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx?subject=14">Visiting the Capitol</a>
                   </li>
-
                   <li>
-                    <a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx?id=98">Accessibility</a>
+                    <a href="https://www.leg.state.mn.us/leg/faq/faqtoc?subject=19">Special Needs Access</a>
                   </li>
                   <li>
-                    <a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx">FAQ</a>
+                    <a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx">Frequently Asked Questions</a>
                   </li>
                 </ul>
               </div>
@@ -34,11 +33,10 @@
               <div class="col-sm-6 col-md-3">
                 <h5 class="title-widget text-left">General Contact</h5>
                 <ul  class="list-unstyled clear-margins">
-                  <li  class="mt-2">Contact a legislative librarian:</li>
-                  <li><a href="tel:651-296-8338">(651) 296-8338</a> or <a href="http://www.leg.state.mn.us/leg/comments.aspx">Email</a></li>
-
-                  <li  class="mt-2"><a href="http://www.leg.state.mn.us/leg/legdir.aspx">Phone Numbers</a></li>         
-                  <li><a href="http://www.leg.state.mn.us/leg/comments.aspx">Submit website comments</a></li>            
+                  <li><a href="tel:651-296-0098">(651) 296-0098</a> or <a href="mailto:lcc@lcc.leg.mn">Email</a></li>
+                  <li class="mt-2 mt-lg-0"><a href="https://ww2.gis.leg.mn/staff.html">Phone Numbers</a></li>
+                    
+                  <li><a href="mailto:gis@lcc.leg.mn">Submit website comments</a></li>            
                 </ul>
               </div>
               <div class="col-sm-6 col-md-3">
@@ -55,7 +53,7 @@
         </footer>
         <div class="row">
           <div class="col-12 bg-dark">
-            <div class="text-center text-light py-1 leg-subfooter">Minnesota House of Representatives &middot; 100 Rev. Dr. Martin Luther King Jr. Blvd. Saint Paul, MN 55155 &middot; <a href="mailto:Webmaster@house.mn">Webmaster@house.mn</a></div>
+            <div class="text-center text-light py-1 leg-subfooter">LCC - GIS &middot; 100 Rev. Dr. Martin Luther King Jr. Blvd. Saint Paul, MN 55155 &middot; <a href="mailto:gis@lcc.leg.mn">gis@lcc.leg.mn</a></div>
           </div>
         </div>
       </div>
@@ -89,11 +87,11 @@
       ga('send', 'pageview');
 
     </script>
-    <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/jquery-ui-1.12.1.custom/jquery-ui.min.js">
+    <script src="https://ww2.gis.leg.mn/assets/js/jquery-ui-1.12.1.custom/jquery-ui.min.js">
     </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
     </script> 
-    <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/node_modules/bootstrap/dist/js/bootstrap.min.js">
+    <script src="https://ww2.gis.leg.mn/assets/node_modules/bootstrap/dist/js/bootstrap.min.js">
     </script> 
   </body>
 </html>

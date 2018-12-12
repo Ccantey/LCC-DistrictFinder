@@ -28,7 +28,7 @@
      <div class="leg_Col1of4-First">
         <h2><a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx?subject=1">About the Legislature</a></h2>
         <ul>
-            <li><a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx">FAQ</a></li>
+            <li><a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx">Frequently Asked Questions</a></li>
             <li><a href="http://www.leg.state.mn.us/leg/howbill.aspx">Guide to the Legislative Process</a></li>
             <li><a href="http://www.leg.state.mn.us/lrl/histleg/">Historical Information</a></li>            
             <li><a href="http://www.leg.state.mn.us/leg/jobs.aspx">Employment/Internships</a></li>

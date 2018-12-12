@@ -1,30 +1,9 @@
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
-main { height: 0; width: 100vw; }
-
-#legContainerMain{
-	overflow: hidden;
-}
-
-#map{
-    height: 550px;
-    border: 1px solid #a7a5a6;
-    /*float: right;*/
-    z-index: 0;
-    cursor:crosshair;
-}
 /*override leg css*/
 .leg_PageContent{
     max-height: 625px;
     min-height:625px;
     font-family: arial;
-    color:#495057;
+    color:#3b3b3b;
     /*margin:0;*/
 }
 .leg_PageContent li a{
@@ -103,9 +82,8 @@ main { height: 0; width: 100vw; }
 
 #sidebar{
     position:relative;
-    /*margin-top:105px;*/
-    /*left:25px;*/
-    width:100%;
+    height:540px;
+    width:285px;
 }
 .notice {
     color: #8d8d8d;
@@ -118,16 +96,15 @@ main { height: 0; width: 100vw; }
 }
 #mask {
     position: absolute;
-    height: 100%;
+    height: 83%;
     top: 0;
-    width: 100%;
+    width: 99.%;
     z-index: 1001;
-     background-color: #f2f2f2;
+    background-color: #e6e6e6;
     border-top: 1px solid #a7a5a6;
     border-right: 1px solid #a7a5a6;
-    border-bottom: 1px solid #a7a5a6;
+    /*border-bottom: 1px solid #a7a5a6;*/
     border-left: 3px solid #a7a5a6;
-
 }
 #mask p{
     margin-top: 10px;
@@ -135,8 +112,8 @@ main { height: 0; width: 100vw; }
 }
 #mask ul{
     margin-top:-7px;
-    /*font-size: 1.1em;*/
-    /*margin-left:0;*/
+    font-size: 1.1em;
+    margin-left:0;
     text-align: center;
 }
 #mask img{
@@ -154,6 +131,14 @@ main { height: 0; width: 100vw; }
     font-size: 0.9em;
 }
 
+#map{
+    width:70%;
+    top:-631px;
+    border: 1px solid #a7a5a6;
+    float: right;
+    z-index: 0;
+    cursor:crosshair;
+}
 .loader {
   margin: auto;
   margin-top:70%;
@@ -225,43 +210,49 @@ ul{
     text-align: center;
 }
 .search{
-	z-index: 1;
-	width:100%;
+    position:relative;
     height:86px;
-    /*margin-top:10px;*/
-    left:25px;
-    background-color: #f2f2f2;
+    background-color: #e6e6e6;
     border-top: 1px solid #a7a5a6;
     border-right: 1px solid #a7a5a6;
     border-bottom: 1px solid #a7a5a6;
     border-left: 3px solid #a7a5a6;
+    width:282px;
 }
+.geo_hint{
+    left:80px;
+    position:relative;
+    text-align:left;
+    top:10px;
+    display:none;
+    font-weight: bold;
+    z-index: 1000;
+    /*font-family: */
 
+}
 .mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2 {
     position:relative;
-    height:90px;
-    background-color: #f2f2f2;
+    height:87px;
+    background-color: #e6e6e6;
     border-top: 1px solid #a7a5a6;
     border-right: 1px solid #a7a5a6;
     border-bottom: 1px solid #a7a5a6;
     border-left: 3px solid #a7a5a6;
 }
 .mnhouse:hover, .mnsenate:hover, .ushouse:hover, .ussenate1:hover, .ussenate2:hover{
-    /*background-color: rgba(150,150,150,.65);*/
+    background-color: rgba(150,150,150,.65);
     border-left: 3px solid #a54a36;
-    /*cursor: pointer;*/
+    /*border-right: 3px solid #fcb228;*/
+    cursor: pointer;
 }
 
-#officials > .active{
-    background-color: rgba(165,74,54,.35);
-    border-top: 1px solid #a54a36;
-    border-right: 1px solid #a54a36;
-    border-bottom: 1px solid #a54a36;
+.active{
+    background-color: rgba(165,74,54,.6);
     border-left: 3px solid #a54a36;
     /*border-right: 3px solid #fcb228;*/
 }
-#officials > .active:hover{
-    /*background-color: rgba(165,74,54,.6);*/
+.active:hover{
+    background-color: rgba(165,74,54,.6);
     border-left: 3px solid #a54a36;
 }
 
@@ -269,59 +260,26 @@ ul{
     margin-top:3px;
 }
 
-/*.lcc_gis_member{
+.lcc_gis_member{
     overflow:hidden;
     width:200px;
     white-space: nowrap;
+    /*text-overflow:ellipsis;*/
     position:relative;
     font-weight: bold;
+    /*bottom: 80px;*/
     left:80px;
     top:0px;
     text-align: left;
     z-index: 101;
-}*/
+}
 
-/*.lcc_gis_memberdistrict{
+.lcc_gis_memberdistrict{
     position: relative;
     left: 80px;
-    top:0;
+    top:5px;
     text-align: left;
-}*/
-.member-info{
-    margin-top:20px;
-    margin-left:40px;
 }
-.district-info{
-    margin-left: 45px;
-}
-#housemember,#senatemember, #ushousemember, #ussenatemember, #ussenatemember2{
-    /*margin-top:8px;*/
-    /*margin-left:35px;*/
-    text-align: center;  
-}
-#housedistrict, #senatedistrict, #ushousedistrict, #ussenatedistrict, #ussenatedistrict2{
-    margin-top:2px;
-    /*margin-left:35px;*/
-    text-align: center;
-}
-
-.contact-info{
-    position: absolute;
-    right:5px;
-    top:18px;
-}
-
-.map-it{
-    position: absolute;
-    right:5px;
-    top:45px;
-}
-
-.contact-info button, .map-it button{
-    padding: 0px 5px;
-    /*font-style:  italic;*/
-}
-
 #officials img {
     height: 100%;
     min-height: 87px;
@@ -331,14 +289,15 @@ ul{
     border:none;
 }
 
-.geo_hint{
-    left:80px;
-    position:relative;
-    text-align:left;
-    top:0;
-    display:none;
-    font-weight: bold;
-    z-index: 1000;
+.membersublist{
+    margin-top:15px;
+}
+.memberLink{
+    position: relative;
+    right: 1px;
+    top:-9px;
+    /*bottom:80px;*/
+    text-align: right;
 }
 
 .search label{
@@ -351,9 +310,11 @@ ul{
 }
 
 #map_reset{
-
-    font-size: 11px;
-
+    position:relative;
+    text-align: right;
+    font-size: 13px;
+    bottom:6px;
+    z-index: 2;
 }
 #members-elect{
     position: absolute;
@@ -366,19 +327,18 @@ ul{
     z-index:3;
 }
 
-/*#map_reset .noref,#map_help .noref, #map_disclaimer .noref{
-     font-size: 11px;
-    padding:3px;
-}*/
+#map_reset .noref,#map_help .noref, #map_disclaimer .noref{
+     color:#a54a36;
+}
 
-/*#map_reset .noref:hover,#map_help .noref:hover, #map_disclaimer .noref:hover{
+#map_reset .noref:hover,#map_help .noref:hover, #map_disclaimer .noref:hover{
     cursor:pointer;
     background-color: #725448;
     color:#e6e6e6;
     border-color:#e6e6e6;
     padding:5px;
     border-radius:3px;
-}*/
+}
 
 #map_layers_toggle{
     color:#e6e6e6;
@@ -389,11 +349,13 @@ ul{
     color:#8d8d8d;
 }
 
-/*#map_help{
-    font-size: 11px;
-    padding:3px;
+#map_help{
+    font-size: 13px;
+    position: absolute;
+    bottom:2px;
+    left:30%;
     z-index: 101;
-}*/
+}
 
 #map_search_results_metadata{
     font-size: 11px;
@@ -404,9 +366,12 @@ ul{
     text-align: center;
 }
 
-#map_disclaimer, #map_help{
-    font-size: 11px;
-    padding:3px;
+#map_disclaimer{
+    font-size: 13px;
+    position: absolute;
+    bottom:2px;
+    right:0;
+    z-index: 101;
 }
 
 #triangle-topright{
@@ -414,7 +379,7 @@ ul{
     right:0;
     width:0;
     height:0;
-    border-top:100px solid #495057;
+    border-top:100px solid #3b3b3b;
     border-left: 100px solid transparent;
     z-index: 101;
 }
@@ -425,11 +390,11 @@ ul{
 
 #map_layers{
     position:absolute;
-    right:-227px;
+    right:-225px;
     width:225px;
-    height: 529px;
-    background-color: #495057;
-    color:#fff;
+    height: 527px;
+    background-color: #3b3b3b;
+    color:#c3c3c3;
 
     z-index: 101;
 }
@@ -439,7 +404,7 @@ ul{
     left:38%;
     top:68px;
     font-size: 15px;
-    /*font-weight: bold;*/
+    font-weight: bold;
 }
 
 #map_layers_content_list{
@@ -450,7 +415,7 @@ ul{
 
 #map_layers_toggle{
     position: absolute;
-    right:5px;
+    right:0;
     top:8px;
 }
 
@@ -459,7 +424,7 @@ ul{
     left:23%;
     top:105px;
     font-size: 15px;
-    /*font-weight: bold;*/
+    font-weight: bold;
 }
 
 #triangle-topright .fa-map{
@@ -477,7 +442,7 @@ ul{
     height:23px;
     border: solid 1px #dcdcdc;
     border-radius: 4px;
-    color: #495057;
+    color: #3b3b3b;
     margin-top: 5px;
     height:27px;
     transition: box-shadow 0.3s, border 0.3s;
@@ -504,7 +469,7 @@ ul{
     top:29px;
     right:3px;
     padding:5px;
-    background-color: #495057;
+    background-color: #3b3b3b;
     color:#e6e6e6;
     border:none;
     border-radius:2px;
@@ -524,7 +489,7 @@ ul{
     left:36%;
     top:125px;
     background-color: #606060;
-    border: 1px solid #495057;
+    border: 1px solid #3b3b3b;
     border-radius: 3px;
     padding: 1px;
     color: white;
@@ -544,7 +509,7 @@ ul{
 .layersswitchLabel{
     position:   relative;   
     left: 77px;
-    top:-18px;
+    top:-15px;
 }
 #satellitediv{
     top:125px;
@@ -562,7 +527,7 @@ ul{
 }
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
-    border: 4px solid #495057; border-radius: 2px;
+    border: 2px solid #3B3B3B; border-radius: 2px;
 }
 .onoffswitch-inner {
     display: block; width: 200%; margin-left: -100%;
@@ -575,23 +540,21 @@ ul{
 }
 .onoffswitch-inner:before {
     content: "OFF";
-    padding-left: 5px;
+    padding-left: 3px;
     background-color: #8D8D8D; color: #FFFFFF;
-    font-weight:300;
 }
 .onoffswitch-inner:after {
     content: "ON";
-    padding-right: 5px;
+    padding-right: 3px;
     background-color: #97BF97; color: #FFFFFF;
     text-align: right;
-    font-weight:300;
 }
 .onoffswitch-switch {
     display: block; width: 16px; margin: -2px;
     background: #FFFFFF;
     position: absolute; top: 0; bottom: 0;
     right: 31px;
-    border: 2px solid #495057; border-radius: 2px;
+    border: 2px solid #3B3B3B; border-radius: 2px;
     transition: all 0.3s ease-in 0s; 
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
@@ -661,47 +624,47 @@ ul{
     #toggleSidebar{
         display:none;
     }
-    #pull-out{
+    /*#pull-out{
         display:none;
-    }
+    }*/
     #pull-in{
         display:none;
     }
 #gpsButton{
-        /*display:none;*/
+        display:none;
     }
+    #mnhouselink, #mnsenlink, #ushouselink, #ussenatelink, #ussenate2link{
+        padding: 3px;
+        border-radius: 3px;
+        color:#a54a36;
+        /*background-color: #a54a36;*/
+        border-color:#e6e6e6;
+        font-size:  11px;
+        font-style:     italic;
 
-
-  #mnhouselink, #mnsenlink, #ushouselink, #ussenatelink, #ussenate2link{
-    padding: 0 5px;
+    }
+  #mnhouselink:hover, #mnsenlink:hover, #ushouselink:hover, #ussenatelink:hover, #ussenate2link:hover{
+    background-color: #725448;
+    color:#e6e6e6;
+    border-color:#e6e6e6;
   }
  
 /*Begin Responsive Web Design*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 500px) {
   .leg_PageHeader{
     display:none;
   }
   .leg_PageContent{
      max-height: 655px;
     }
-
-    #sidebar{
-        background-color:#fff;
-        top:5px;
-        z-index: 1001;
-        left:-105%;
-    }
-/*    #mask{
-        height:100%;
-    }*/
-/*  .search{
+  .search{
     background-color:white;
     top:-60px;
     width:100%;
     border:none;
     height:50px;
-  }*/
-/*  .form-group{
+  }
+  .form-group{
     padding:7px 9px 9px 2px;
   }
   .form-group input{
@@ -709,13 +672,16 @@ ul{
     left: 36px;
     height:37px;
     font-size:1.2em;
+     /* Firefox */
         width: -moz-calc(100% - 68px);
+        /* WebKit */
         width: -webkit-calc(100% - 68px);
+        /* Opera */
         width: -o-calc(100% - 68px);
+        /* Standard */
         width: calc(100% -68px);
 
-  }*/
-
+  }
   #leg_PageHeader_expand{
     display:block;
     position:absolute;
@@ -729,37 +695,55 @@ ul{
     z-index: 1000;
 }
 
-
+  #searchButton{
+    display:block;
+    position:absolute;
+    top:26px;
+    right:0;
+    padding:12px;
+    background-color: #3b3b3b;
+    color:#e6e6e6;
+    border:none;
+    border-radius:2px;
+}
   #map{
-    position:relative;
-    top:-525px;
-    width:100%;
-    height:530px;
+    /*position:absolute;*/
+    top:-620px;
+    width:99%;
+    height:500px;
   }
   #triangle-topright{
-    top:-525px;
-    right:4%;
+    top:101px;
   }
-
-
+  #sidebar{
+    top:-12px;
+    left:-100%;
+    z-index:101;
+    width:100%;
+    transition: all 0.5s ease-in 0s;
+    background-color:white;
+    height:609px;
+  }
   #sidebar.animate{
     left: 0px;
     transition: all 0.5s ease-out 0s;
     /*width: 250px;*/
   }
-  
+  #housedistrict, #senatedistrict, #ushousedistrict, #ussenatedistrict, #ussenatedistrict2{
+    left:0;
+  }
   #sidebar.animate #housedistrict, #sidebar.animate #senatedistrict, #sidebar.animate #ushousedistrict, #sidebar.animate #ussenatedistrict, #sidebar.animate #ussenatedistrict2{
     left:80px;
   }
   #map_layers{
-    top:-525px;
+    top:101px;
   }
 
   #toggleSidebar{
         display:block;
         font-size:1.2rem;
         padding:18px;
-        background-color: #495057;
+        background-color: #3b3b3b;
         text-align:center;
         margin:0;
         color:#e6e6e6;
@@ -773,43 +757,63 @@ ul{
     #geocodeFeedback{
         text-align: center;
     }
-/*    #map_reset{
+    #map_reset{
         bottom:-28px;
-    }*/
+    }
     #pull-out{
-        display: block;
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
         border-bottom-right-radius: 5px;
         border-top-right-radius: 5px;
-        /*background-color: #495057;*/
-        /*left: 4%;*/
+        background-color: #3b3b3b;
+        left: 0;
         padding: 30px 15px;
         position: absolute;
-        top: 40%;
+        top: 50%;
         z-index: 1;
-        /*color: #8d8d8d;*/
+        color: #8d8d8d;
     }
     #pull-in{
         display:block;
         position:absolute;
-        right:5px;
-        top: 5px;
-        padding: 3px 10px;
-
+        right:15px;
+        top: 10px;
+        background-color: #3b3b3b;
+        color:#e6e6e6;
+        padding:7px 10px 7px 7px;
+        border-radius:5px;
     }
-
+    #gpsButton{
+        display:block;
+        position:absolute;
+        top: 26px;
+        left:0;
+        padding: 11px 12px 12px 12px;
+        background-color:#3b3b3b;
+        color: #e6e6e6;
+        border:none;
+        border-radius:2px;
+    }
     .search label {
         /*left: 37px;*/
         position: relative;
     }
 }
-@media screen and (min-width: 576px) and (max-width: 800px) {
+@media screen and (min-width: 501px) and (max-width: 800px) {
 /*    #mask{
         background-color:red;        
     }*/
     #gpsButton{
-        /*display:none;*/
+        display:none;
     }
-
+    #map{
+        /* Firefox */
+        width: -moz-calc(99% - 286px);
+        /* WebKit */
+        width: -webkit-calc(99% - 286px);
+        /* Opera */
+        width: -o-calc(99% - 286px);
+        /* Standard */
+        width: calc(99% - 286px);
+    }
 }

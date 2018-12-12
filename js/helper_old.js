@@ -39,7 +39,6 @@ $( document ).ready(function() {
     	e.preventDefault();
     	zoomToGPSLocation();
     	ga('send', 'event', 'geolocate', 'mobileGPS', 'click');
-    	slideSidebar();
     });
 
     // enter key event
@@ -49,23 +48,22 @@ $( document ).ready(function() {
     $('#searchButton').click(function(e){
     	e.preventDefault();
     	ga('send', 'event', 'geolocate', 'searchbutton', 'click');
-    	address = document.getElementById('geocodeAddress').value;
-    	geoCodeAddress(geocoder, map, address);
+    	geoCodeAddress(geocoder, map);
     })
 	
 	// hide links - format is off until results come back
     $('.memberLink').hide();
 
-    // $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).click(function(e) {
+    $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).click(function(e) {
 
-    //     var link = '';        
-    //     link = $(this).attr('data-webid');
-    //     ga('send', 'event', 'member', 'contactMember', link);
-    // 	window.open(link)
-    // });
+        var link = '';        
+        link = $(this).attr('data-webid');
+        ga('send', 'event', 'member', 'contactMember', link);
+    	window.open(link)
+    });
 
 	// Members UI click turn red with 'active' class
-	$( "#mnhousemap, #mnsenmap, #ushousemap, #ussenatemap, #ussenate2map" ).click(function(e) {
+	$( "#mnhouselink, #mnsenlink, #ushouselink, #ussenatelink, #ussenate2link" ).click(function(e) {
 		e.stopPropagation();
 
 		//need to color div 3 levels up
@@ -75,7 +73,7 @@ $( document ).ready(function() {
 		// console.log(greatgrandma.attr('class'))
 		// ga('send', 'event', 'member', 'showmapdistrict', 'click');
 
-        grandma.addClass('active').siblings().removeClass('active');
+        greatgrandma.addClass('active').siblings().removeClass('active');
         //get static minnesota geojson (faster than php)
 		if (this.id == 'ussenatelink' || this.id == 'ussenate2link'){
 		  	if(typeof MinnesotaBoundaryLayer === 'undefined'){
@@ -93,7 +91,7 @@ $( document ).ready(function() {
 		  			showSenateDistrict();
 		  		}	
 		} else {
-	        showDistrict(grandma.attr('class'));
+	        showDistrict(greatgrandma.attr('class'));
 	    }
 	    
 	});
@@ -101,15 +99,15 @@ $( document ).ready(function() {
 	//Open layers tab
 	$('#triangle-topright').click(function(){
   		$(this).animate({right:'-100px'},250, function(){
-    		$('#map_layers').animate({right:'0'},250);
+    		$('#map_layers').animate({right:0},250);
     		ga('send', 'event', 'layers', 'openLayersTab', 'click');
   		});  
 	});
 
     //Close layers tab
 	$('#map_layers_toggle').click(function(){
-  		$('#map_layers').animate({right:'-227px'},250, function(){
-    		$('#triangle-topright').animate({right:'0'},250);
+  		$('#map_layers').animate({right:'-225px'},250, function(){
+    		$('#triangle-topright').animate({right:0},250);
   		});  
 	});
 	
@@ -187,16 +185,16 @@ $( document ).ready(function() {
     });
 
     // $(".geo_hint").css("color","rgba(0,0,0,0)");
-    // $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).on("mouseenter",function(e){
-    //     //if ($(this).hasClass('active') == false){
-    //         console.log('enetered' + $(this).find(".geo_hint"))
-    //         $(this).find(".geo_hint").css("color","rgba(255,255,255,.90)");
-    //         $(this).find(".geo_hint").css('display', 'block')
-    //     //}
-    // }).on("mouseleave", function(){
-    // 	$(".geo_hint").css("color","rgba(0,0,0,0)");
-    // 	$(this).find(".geo_hint").css('display', 'none');
-    // });
+    $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).on("mouseenter",function(e){
+        //if ($(this).hasClass('active') == false){
+            console.log('enetered' + $(this).find(".geo_hint"))
+            $(this).find(".geo_hint").css("color","rgba(255,255,255,.90)");
+            $(this).find(".geo_hint").css('display', 'block')
+        //}
+    }).on("mouseleave", function(){
+    	$(".geo_hint").css("color","rgba(0,0,0,0)");
+    	$(this).find(".geo_hint").css('display', 'none');
+    });
 
 	$('.loader').hide();
 

@@ -31,30 +31,32 @@
     <meta name="twitter:description" content="Interactive map of the Minnesota Legislature.">
     <meta name="twitter:image" content="https://www.gis.leg.mn/iMaps/districts/images/Social/social2.png">
 
-  <link href="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+  <link href="https://ww2.gis.leg.mn/assets/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
 
   <!-- LNET compiled SASS -->
-  <link href="https://ww2.gis.leg.mn/iMaps/bootstrap4/styles/css/app.css" rel="stylesheet">
+  <link href="https://ww2.gis.leg.mn/assets/styles/css/app.css" rel="stylesheet">
   <!-- jQuery needs to load before Bootstrap JS. -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
 
-  <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/getParameterByName.js"></script>
-  <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/calendar.js"></script>
-  <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/navbarhelper.js"></script>
-  <script src="https://ww2.gis.leg.mn/iMaps/bootstrap4/js/bootstrapWindowHelper.js"></script>
+  <script src="https://ww2.gis.leg.mn/assets/js/getParameterByName.js"></script>
+  <script src="https://ww2.gis.leg.mn/assets/js/calendar.js"></script>
+  <script src="https://ww2.gis.leg.mn/assets/js/navbarhelper.js"></script>
+  <script src="https://ww2.gis.leg.mn/assets/js/bootstrapWindowHelper.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" /> -->
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script src="js/map.js"></script>
+  <link rel="stylesheet" href="css/app.css" />
+  <script src="js/app.js"></script>
   <script src="js/helper.js"></script>
   <!-- <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script> -->
     <!--uses Google JS APi -not geocoding API -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAPiQ_pNX0vOYz5w04VSn0WUTS_5knWOg" > 
   </script>
   <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <link rel="stylesheet" href="css/plugins/leaflet-gesture-handling.min.css" type="text/css">
+<script src="js/plugins/leaflet-gesture-handling.min.js"></script>
 
   <title>LCC-GIS</title>
   </head>
@@ -98,8 +100,8 @@
 
        <div class="leg-brand-container bg-darkgray py-1 pl-0">
            <div class="container  d-print-none">
-            <img src="https://ww2.gis.leg.mn/iMaps/bootstrap4/img/icons/capitol2.svg" height="24px" style="margin-top:-8px;opacity:0.95">
-               <a id="ctl00_HyperLink1" class="leg-brand-text text-white pl-1" href="/" ">Minnesota Legislature</a>
+            <img src="https://ww2.gis.leg.mn/assets/img/icons/capitol2.svg" height="24px" style="margin-top:-8px;opacity:0.95">
+               <a id="ctl00_HyperLink1" class="leg-brand-text text-white pl-1" href="https://www.leg.state.mn.us/">Minnesota Legislature</a>
 
 
                <form class="form-inline float-right ml-auto d-none d-md-block p-0">
@@ -123,25 +125,25 @@
        </div>                 
 
         <!-- We can change *-dark to *-house, *-senate, *-joint and add that color to variables -->
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg py-1 d-block d-print-none">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg px-0 py-1 d-block d-print-none">
           <div class="container">
-            <div class="row w-100 pl-md-2">
+            <div class="w-100 px-auto">
               <div class="col-12 position-static p-lg-0">
                <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#top-nav" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
                 <span class="d-lg-none pl-1 text-white leg-menu-text" data-toggle="collapse" data-target="#top-nav"> Menu</span>
 
                 <div class="collapse navbar-collapse py-0" id="top-nav">
-                  <ul class="navbar-nav mt-2 mt-lg-0 pl-3 pl-lg-0">
+                  <ul class="navbar-nav mt-2 mt-lg-0 px-2 pl-lg-0">
                    <!--  <li class="nav-item mr-3">
                       <a  class="nav-link" data-parent="#top-nav"  href="https://www.leg.state.mn.us/">Legislature</a>
                     </li> -->
 
-                    <li class="nav-item ml-lg-2">
+                    <li class="nav-item">
                       <a aria-controls="houseExternalContent" aria-expanded="false" class="nav-link dropdown-toggle pl-0" data-parent="#top-nav" data-toggle="collapse" href="#houseExternalContent">House</a>
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="houseExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header  "><a href="https://www.house.leg.state.mn.us/">Minnesota House of Representatives</a></div>
                           </div>
@@ -202,7 +204,7 @@
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="senateExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header pb-1"><a href="http://www.senate.mn/">Minnesota Senate</a></div>
                           </div>
@@ -261,7 +263,7 @@
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="jointExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header pb-1"><a href="https://www.commissions.leg.state.mn.us/">Joint Departments, Offices, and Commissions</a></div>
                           </div>
@@ -275,6 +277,7 @@
                                 <dd><a href="https://www.revisor.mn.gov/">Revisor of Statutes</a></dd>
                                 <dd><a href="http://www.leg.state.mn.us/lrl/lrl.aspx">Legislative Reference Library</a></dd> 
                                 <dd><a href="http://www.auditor.leg.state.mn.us/">Office of the Legislative Auditor</a></dd>
+                                <dd><a href="http://www.lbo.leg.mn/">Legislative Budget Office</a></dd>
                               </dl>
                             </div>
                             <div class="col-12 col-sm-4">
@@ -304,7 +307,7 @@
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="schedulesExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header pb-1"><a href="https://www.leg.state.mn.us/leg/schedules">Schedules, Calendars, and Legislative Business</a></div>
                           </div>
@@ -349,7 +352,7 @@
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="committeesExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header pb-1"><a href="https://www.leg.state.mn.us/leg/committees">Legislative Committees</a></div>
                           </div>
@@ -420,7 +423,7 @@
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="billsExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header pb-1"><a href="https://www.leg.state.mn.us/leg/legis">Bills</a></div>
                           </div>
@@ -470,7 +473,7 @@
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="lawExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header pb-1"><a href="https://www.revisor.mn.gov/pubs/">Statutes, Laws, and Rules</a></div>
                           </div>
@@ -531,7 +534,7 @@
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="multimediaExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header pb-1"><a href="https://www.leg.state.mn.us/leg/multimedia">Multimedia — Audio, Video, Broadcast TV, News, & Photos</a></div>
                           </div>
@@ -577,7 +580,7 @@
                     </li>
                     <div class="dropdown collapse navbar-nav-collapse" id="publicationsExternalContent">
                       <div class="bg-dark">
-                        <div class="container px-4 px-md-3">
+                        <div class="container px-3">
                           <div class="row">
                             <div class="col nav-header pb-1"><a href="https://www.leg.state.mn.us/leg/publicat">Legislative Research, Reports & Information</a></div>
                           </div>
@@ -631,10 +634,17 @@
                       </div>
                     </div>
                   </ul>
-                  <form class="form-inline ml-auto d-block d-md-none p-0">
-                    <label class="sr-only" for="main-search">Search Legislature</label>     
-                    <input class="form-control form-control-sm py-0 mr-2 js-search" id="main-search" name="search" placeholder="Search..." type="text">  
-                    <button class="js-search-btn btn btn-darkgray btn-sm"><i class="fas fa-search"></i></button>  
+                  <form class="form-inline ml-auto d-block d-md-none p-2">
+                    <label class="sr-only js-search-sm-label" for="sm-search">Search Legislature</label>
+                    <div class="input-group mb-2 mr-sm-2">
+
+                      <input class="form-control form-control-sm js-sm-search" id="sm-search" name="search" aria-label="Search Legislature" aria-describedby="searchButton" placeholder="Search..." type="text"> 
+
+                      <div class="input-group-append">
+                        <button class="js-search-sm-btn btn btn-darkgray btn-sm" type="button" id="searchButton"  alt="Search Button"><i class="fa fa-search"></i></button>
+                      </div>
+
+                    </div>
                   </form>
 
                 </div>
@@ -643,7 +653,7 @@
             </div>
           </div>
         </nav>
-        <div class="leg-banner img-joint d-print-none">
+        <div class="leg-banner img-joint d-none d-sm-block d-print-none">
           <div class="position-relative h-100">
           <div class="leg-title-container pl-0">
             <div class="container">
@@ -664,7 +674,7 @@
               <span class="d-md-none pl-1 text-white" data-toggle="collapse" data-target="#navbarNav"> GIS Menu</span>
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav mt-2 mt-lg-0 px-2 pl-lg-0">
                 <li class="nav-item">
                   <a class="nav-link pl-md-0" href="https://ww2.gis.leg.mn/index.html">Home</a>
                 </li>
@@ -712,12 +722,12 @@
                 
               </ul>
               <ul class="navbar-nav ml-auto d-flex flex-row">
-                <li class="nav-item list-inline-item" data-toggle="tooltip" data-placement="bottom" title="Email">
+                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Email">
                   <a aria-label="email staff" class="nav-link test" href="mailto:lcc@lcc.leg.mn">
                     <i class="far fa-lg fa-envelope"></i>
                   </a>
                 </li>
-                <li class="nav-item list-inline-item" data-toggle="tooltip" data-placement="bottom" title="Print">
+                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Print">
                   <a aria-label="print page" class="nav-link pr-1" href="javascript:window.print();">
                     <i class="fas fa-lg fa-print"></i>
                   </a>
