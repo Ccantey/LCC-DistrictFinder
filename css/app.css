@@ -257,6 +257,7 @@ ul{
     top:45px;
 }
 
+
 .contact-info button, .map-it button{
     padding: 0px 5px;
     /*font-style:  italic;*/
@@ -600,7 +601,15 @@ ul{
   #mnhousemap, #mnsenmap, #ushousemap, #ussenatemap, #ussenate2map{
     width:78px;
   }
- 
+
+  #mnhouselink:hover .contact, #mnsenlink:hover .contact, #ushouselink:hover .contact, #ussenatelink:hover .contact, #ussenate2link:hover .contact{
+    color:#fff;
+  }
+
+  #mnhousemap:hover .contact, #mnsenmap:hover .contact, #ushousemap:hover .contact, #ussenatemap:hover .contact, #ussenate2map:hover .contact{
+    color:#fff;
+  }
+
  
 /*Begin Responsive Web Design*/
 @media screen and (max-width: 767px) {

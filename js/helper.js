@@ -71,7 +71,6 @@ $(function (){
 		// ga('send', 'event', 'member', 'showmapdistrict', 'click');
 
         grandma.addClass('active').siblings().removeClass('active');
-        console.log(grandma)
         //get static minnesota geojson (faster than php)
 		if (this.id == 'ussenatemap' || this.id == 'ussenate2map'){
 		  	if(typeof MinnesotaBoundaryLayer === 'undefined'){
