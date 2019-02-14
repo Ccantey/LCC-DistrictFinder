@@ -32,7 +32,7 @@
             <li><a href="http://www.leg.state.mn.us/leg/howbill.aspx">Guide to the Legislative Process</a></li>
             <li><a href="http://www.leg.state.mn.us/lrl/histleg/">Historical Information</a></li>            
             <li><a href="http://www.leg.state.mn.us/leg/jobs.aspx">Employment/Internships</a></li>
-            <li><a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx?subject=14">Visiting the Capitol</a></li>
+            <li><a href="https://www.leg.state.mn.us/leg/faq/faq?subject=14">Visiting the Capitol</a></li>
             <li><a href="http://www.gis.leg.mn/html/maps.html">Maps</a></li>
             <li><a href="http://www.gis.leg.mn/OpenLayers/districts/">Who Represents Me?</a></li>
             <li><a href="http://www.leg.state.mn.us/leg/accessibility.aspx">Accessibility</a></li>

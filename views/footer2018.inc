@@ -12,10 +12,10 @@
                     <a href="http://www.leg.state.mn.us/leg/jobs.aspx">Employment/Internships</a>
                   </li>
                   <li>
-                    <a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx?subject=14">Visiting the Capitol</a>
+                    <a href="https://www.leg.state.mn.us/leg/faq/faq?subject=14">Visiting the Capitol</a>
                   </li>
                   <li>
-                    <a href="https://www.leg.state.mn.us/leg/faq/faqtoc?subject=19">Special Needs Access</a>
+                    <a href="https://www.leg.state.mn.us/leg/faq/faq?subject=19">Special Needs Access</a>
                   </li>
                   <li>
                     <a href="http://www.leg.state.mn.us/leg/faq/faqtoc.aspx">Frequently Asked Questions</a>
@@ -33,10 +33,10 @@
               <div class="col-sm-6 col-md-3">
                 <h5 class="title-widget text-left">General Contact</h5>
                 <ul  class="list-unstyled clear-margins">
-                  <li><a href="tel:651-296-0098">(651) 296-0098</a> or <a href="mailto:lcc@lcc.leg.mn">Email</a></li>
+                  <li><a href="tel:651-296-0098">(651) 296-0098</a> or <a href="mailto:gis@gis.leg.mn">Email</a></li>
                   <li class="mt-2 mt-lg-0"><a href="https://ww2.gis.leg.mn/staff.html">Phone Numbers</a></li>
                     
-                  <li><a href="mailto:gis@lcc.leg.mn">Submit website comments</a></li>            
+                  <li><a href="mailto:gis@gis.leg.mn">Submit website comments</a></li>            
                 </ul>
               </div>
               <div class="col-sm-6 col-md-3">
@@ -53,7 +53,7 @@
         </footer>
         <div class="row">
           <div class="col-12 bg-dark">
-            <div class="text-center text-light py-1 leg-subfooter">LCC - GIS &middot; 100 Rev. Dr. Martin Luther King Jr. Blvd. Saint Paul, MN 55155 &middot; <a href="mailto:gis@lcc.leg.mn">gis@lcc.leg.mn</a></div>
+            <div class="text-center text-light py-1 leg-subfooter">LCC - GIS &middot; 100 Rev. Dr. Martin Luther King Jr. Blvd. Saint Paul, MN 55155 &middot; <a href="mailto:gis@gis.leg.mn">gis@lcc.leg.mn</a></div>
           </div>
         </div>
       </div>

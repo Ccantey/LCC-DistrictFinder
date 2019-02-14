@@ -31,18 +31,18 @@
     <meta name="twitter:description" content="Interactive map of the Minnesota Legislature.">
     <meta name="twitter:image" content="https://www.gis.leg.mn/iMaps/districts/images/Social/social2.png">
 
-  <link href="https://ww2.gis.leg.mn/assets/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+  <link href="https://www.gis.leg.mn/assets/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
 
   <!-- LNET compiled SASS -->
-  <link href="https://ww2.gis.leg.mn/assets/styles/css/app.css" rel="stylesheet">
+  <link href="https://www.gis.leg.mn/assets/styles/css/app.css" rel="stylesheet">
   <!-- jQuery needs to load before Bootstrap JS. -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
 
-  <script src="https://ww2.gis.leg.mn/assets/js/getParameterByName.js"></script>
-  <script src="https://ww2.gis.leg.mn/assets/js/calendar.js"></script>
-  <script src="https://ww2.gis.leg.mn/assets/js/navbarhelper.js"></script>
-  <script src="https://ww2.gis.leg.mn/assets/js/bootstrapWindowHelper.js"></script>
+  <script src="https://www.gis.leg.mn/assets/js/getParameterByName.js"></script>
+  <script src="https://www.gis.leg.mn/assets/js/calendar.js"></script>
+  <script src="https://www.gis.leg.mn/assets/js/navbarhelper.js"></script>
+  <script src="https://www.gis.leg.mn/assets/js/bootstrapWindowHelper.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" /> -->
@@ -100,7 +100,7 @@
 
        <div class="leg-brand-container bg-darkgray py-1 pl-0">
            <div class="container  d-print-none">
-            <img src="https://ww2.gis.leg.mn/assets/img/icons/capitol2.svg" height="24px" style="margin-top:-8px;opacity:0.95">
+            <img src="https://www.gis.leg.mn/assets/img/icons/capitol2.svg" height="24px" style="margin-top:-8px;opacity:0.95">
                <a id="ctl00_HyperLink1" class="leg-brand-text text-white pl-1" href="https://www.leg.state.mn.us/">Minnesota Legislature</a>
 
 
@@ -158,7 +158,7 @@
                                 <dd><a href="http://www.house.leg.state.mn.us/hinfo/staff.asp">Staff</a></dd>
                                 <dd><a href="http://www.house.leg.state.mn.us/has/employment.asp">Employment</a></dd>
 
-                                <dd><a href="http://www.leg.state.mn.us/leg/districtfinder.aspx">Who Represents Me?</a></dd>
+                                <dd><a href="https://www.gis.leg.mn/iMaps/districts/">Who Represents Me?</a></dd>
                               </dl>
                             </div>
                             <div class="col-12 col-sm-6 col-md-3 mt-1">
@@ -218,7 +218,7 @@
                                 <dd class="text-muted"><a href="http://www.senate.mn/members/index.php?ls=#leader">Leadership</a></dd>
                                 <dd class="text-muted"><a href="http://www.senate.mn/employees/employee_list.php?ls=">Staff</a></dd>
                                 <dd class="text-muted"><a href="http://www.senate.mn/jobs/index.php?office_id=1005&amp;div_id=1020#header">Employment</a></dd>
-                                <dd><a href="http://www.leg.state.mn.us/leg/districtfinder.aspx">Who Represents Me?</a></dd>
+                                <dd><a href="https://www.gis.leg.mn/iMaps/districts/">Who Represents Me?</a></dd>
 
                                 <!-- <dd class="text-muted">Employment</dd> -->
                               </dl>
@@ -567,7 +567,7 @@
                               <dl>
                                 <dt class="text-white">Joint</dt>
                                 <dd><a href="http://www.house.leg.state.mn.us/htv/htv.asp">Broadcast TV Schedule</a></dd>
-                                <dd><a href="http://www.lcc.leg.mn/meetings-all.htm">Commission Audio/Video</a></dd>
+                                <dd><a href="https://www.commissions.leg.state.mn.us/meetings-all.htm">Commission Audio/Video</a></dd>
                               </dl>
                             </div>
                           </div>
@@ -658,8 +658,8 @@
           <div class="leg-title-container pl-0">
             <div class="container">
               <!-- TWO TITLE LINES -->
-              <a class="leg-title-text-2-lines text-white" href="https://ww2.gis.leg.mn/index.html" id="leg-title-text" style="">Legislative Coordinating Commission</a><br>
-              <a class="leg-subtitle-text text-white" href="https://ww2.gis.leg.mn/index.html" id="leg-title-text" style="">Geospatial Information</a>
+              <a class="leg-title-text-2-lines text-white" href="https://www.gis.leg.mn/index.html" id="leg-title-text" style="">Legislative Coordinating Commission</a><br>
+              <a class="leg-subtitle-text text-white" href="https://www.gis.leg.mn/index.html" id="leg-title-text" style="">Geospatial Information</a>
 
               <!-- <a class="leg-title-text text-white" href="index.html" id="leg-title-text" style="">Legislative Coordinating Commission</a><br> -->
             </div>
@@ -676,45 +676,45 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mt-2 mt-lg-0 px-2 pl-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link pl-md-0" href="https://ww2.gis.leg.mn/index.html">Home</a>
+                  <a class="nav-link pl-md-0" href="https://www.gis.leg.mn/index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="mapsDropdown">Maps and Data</a>
                   <div aria-labelledby="mapsDropdown" class="dropdown-menu">
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/html/maps.html">Maps Page</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/hsemapdata.htm">House - Maps and Data</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/senmapdata.htm">Senate - Maps and Data</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/cngmapdata.htm">Congress - Maps and Data</a>   
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/html/maps.html">Maps Page</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/hsemapdata.htm">House - Maps and Data</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/senmapdata.htm">Senate - Maps and Data</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/cngmapdata.htm">Congress - Maps and Data</a>   
                   </div>
                 </li>
                 <li class="nav-item dropdown">
                   <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="msDropdown">Map Services</a>
                   <div aria-labelledby="msDropdown" class="dropdown-menu">
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/iMaps/districts/">Who Represents Me</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/iMaps/schooldistricts/">School District Finder</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/iMaps/precincts/">Precinct Finder</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/html/maps.html">More...</a>   
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/iMaps/districts/">Who Represents Me</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/iMaps/schooldistricts/">School District Finder</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/iMaps/precincts/">Precinct Finder</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/html/maps.html">More...</a>   
                   </div>
                 </li>
                 <li class="nav-item dropdown">
                   <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="redistrictDropdown">Redistricting</a>
                   <div aria-labelledby="redistrictDropdown" class="dropdown-menu">
                     <h4 class="dropdown-header">Redistricting Plans</h4>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/redist2010/plans.php?plname=L2012&pltype=court">2012 Legislative Districts</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/redist2010/cong10.php?name=C2012&pltype=court">2012 Congressional Districts</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/html/mcplans2013.html">2013 Metropolitan Council</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/redist2010/plans.php?plname=L2012&pltype=court">2012 Legislative Districts</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/redist2010/cong10.php?name=C2012&pltype=court">2012 Congressional Districts</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/html/mcplans2013.html">2013 Metropolitan Council</a>
 
                     <h4 class="dropdown-header">Redistricting Pages</h4>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/html/redistricting.html">2020 Redistricting</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/html/redistricting2010.html">2010 Redistricting</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/html/redistricting2000.html">2000 Redistricting</a>
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/html/redistricting1990.html">1990 Redistricting</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/html/redistricting.html">2020 Redistricting</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/html/redistricting2010.html">2010 Redistricting</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/html/redistricting2000.html">2000 Redistricting</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/html/redistricting1990.html">1990 Redistricting</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
                   <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="lccInfoDropdown">Information</a>
                   <div aria-labelledby="lccInfoDropdown" class="dropdown-menu">
-                    <a class="dropdown-item" href="https://ww2.gis.leg.mn/html/about.html">About</a>
+                    <a class="dropdown-item" href="https://www.gis.leg.mn/html/about.html">About</a>
                     <a class="dropdown-item" href="http://ww2.gis.leg.mn/staff.html">Staff</a>
                     <a class="dropdown-item" href="http://www.lcc.leg.mn/">LCC Home Page</a>
                   </div>
@@ -722,8 +722,18 @@
                 
               </ul>
               <ul class="navbar-nav ml-auto d-flex flex-row">
+                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+                  <a aria-label="Tweet" class="nav-link test" href="http://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.gis.leg.mn%2FiMaps%2Fdistricts%2F&text=Who%20represents%20Me?%20&hashtags=mnleg">
+                    <i class="fab fa-lg fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+                  <a aria-label="Post to Facebook" class="nav-link test" id="shareBtn" href="#">
+                    <i class="fab fa-lg fa-facebook-square"></i>
+                  </a>
+                </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Email">
-                  <a aria-label="email staff" class="nav-link test" href="mailto:lcc@lcc.leg.mn">
+                  <a aria-label="email staff" class="nav-link test" href="mailto:gis@gis.leg.mn">
                     <i class="far fa-lg fa-envelope"></i>
                   </a>
                 </li>

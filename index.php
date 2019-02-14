@@ -7,10 +7,8 @@
 <!-- Main Content -->
 <div id="legContainerMain" class="container py-4 px-0 px-md-3"> <!--use overflow-hidden to hide content-->
 	<div class="row">
-		<div class="col pypy-md-1">
+		<div class="col py-md-1">
 			<h1 class="leg-portal-header text-center mb-1"><span class="d-none d-sm-inline">Geographic Information Services |</span> <span class="text-secondary">Who Represents Me?</span></h1>
-			<h4 class="text-center">* Members-Elect *</h4>
-
 		</div>
 	</div>
 	<div class="row">
@@ -23,7 +21,7 @@
 
 	</div>
 	<div class="row">
-		<nav class="col-md-4 sidebar px-md-0">
+		<nav class="col-md-6 col-lg-4 sidebar px-md-0">
 			<div class="sidebar-sticky">
 				<div class='search px-1 py-1'>
 					<label for="geocode" class="mb-0">Enter Address, City, State, and Zipcode</label>
@@ -69,7 +67,7 @@
 							<img id='housephoto' class='mnhouse_img img-fluid' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""/>
 
 							<div class="contact-info float-right">
-								<a id='mnhouselink' class="btn btn-outline-primary btn-sm" title><i class="fas fa-address-card"></i></a>
+								<a id='mnhouselink' target="_blank" class="btn btn-outline-primary btn-sm" title><span class="contact">Contact </span><i class="fas fa-address-card"></i></a>
 							</div>
 
 							<div class="member-info">
@@ -77,7 +75,7 @@
 								<div id='housedistrict' class=""></div>
 							</div>
 							<div class="map-it float-right">
-								<button id="mnhousemap" class="btn btn-outline-primary btn-sm"  title="View district"><i class="fas fa-map-marked-alt"></i></button>										
+								<button id="mnhousemap" class="btn btn-outline-primary btn-sm"  title="View district"><span class="contact">District </span><i class="fas fa-map-marked-alt"></i></button>										
 							</div>
 							
 							</div>
@@ -85,14 +83,14 @@
 								<img id='senatephoto' class='mnsenate_img img-fluid' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""/>
 
 								<div class="contact-info float-right">
-									<a id="mnsenlink" class="btn btn-outline-primary btn-sm" title><i class="fas fa-address-card"></i></a>									
+									<a id="mnsenlink" target="_blank" class="btn btn-outline-primary btn-sm" title><span class="contact">Contact </span><i class="fas fa-address-card"></i></a>									
 								</div>
 								<div class="member-info">
 									<div id='senatemember' class='font-weight-bold'></div>
 									<div id='senatedistrict' class=''></div>
 								</div>
 								<div class="map-it float-right">
-									<button id="mnsenmap" class="btn btn-outline-primary btn-sm" title="View district"><i class="fas fa-map-marked-alt"></i></button>										
+									<button id="mnsenmap" class="btn btn-outline-primary btn-sm" title="View district"><span class="contact">District </span><i class="fas fa-map-marked-alt"></i></button>										
 								</div>
 							</div>
 
@@ -100,7 +98,7 @@
 								<img id='ushousephoto' class='ushouse_img img-fluid' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt="" />
 
 								<div class="contact-info float-right">
-									<a id="ushouselink" class="btn btn-outline-primary btn-sm" title><i class="fas fa-address-card"></i></a>				
+									<a id="ushouselink" target="_blank" class="btn btn-outline-primary btn-sm" title><span class="contact">Contact </span><i class="fas fa-address-card"></i></a>				
 								</div>
 
 								<div class="member-info">
@@ -109,16 +107,16 @@
 								</div>
 
 								<div class="map-it float-right">
-									<button id="ushousemap" class="btn btn-outline-primary btn-sm" title="View district"><i class="fas fa-map-marked-alt"></i></button>
+									<button id="ushousemap" class="btn btn-outline-primary btn-sm" title="View district"><span class="contact">District </span><i class="fas fa-map-marked-alt"></i></button>
 								</div>
 								
 							</div>
 							<div class='ussenate1'>
-								<div class="membersublist">
+								
 									<img id='ussenatephoto' class='ussenate1_img img-fluid' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""/>
 
 									<div class="contact-info float-right">
-										<a id="ussenatelink" class="btn btn-outline-primary btn-sm"  title><i class="fas fa-address-card"></i></a>				
+										<a id="ussenatelink" target="_blank" class="btn btn-outline-primary btn-sm"  title><span class="contact">Contact </span><i class="fas fa-address-card"></i></a>				
 									</div>
 
 									<div class="member-info">
@@ -126,17 +124,16 @@
 										<div id='ussenatedistrict' class=''></div>
 									</div>
 									<div class="map-it float-right">
-										<button id="ussenatemap" class="btn btn-outline-primary btn-sm" title="View district"><i class="fas fa-map-marked-alt"></i></button>
+										<button id="ussenatemap" class="btn btn-outline-primary btn-sm" title="View district"><span class="contact">District </span><i class="fas fa-map-marked-alt"></i></button>
 									</div>
-								</div>
+							
 								
 							</div>
 							<div class='ussenate2'>
-								<div class="membersublist">
 									<img id='ussenatephoto2' class='ussenate2_img img-fluid' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""  />
 
 									<div class="contact-info float-right">
-										<a id="ussenate2link" class="btn btn-outline-primary btn-sm" title><i class="fas fa-address-card"></i></a>				
+										<a id="ussenate2link" target="_blank" class="btn btn-outline-primary btn-sm" title><span class="contact">Contact </span><i class="fas fa-address-card"></i></a>				
 									</div>
 
 									<div class="member-info">
@@ -145,10 +142,8 @@
 									</div>
 
 									<div class="map-it float-right">
-										<button id="ussenate2map" class="btn btn-outline-primary btn-sm" title="View district"><i class="fas fa-map-marked-alt"></i></button>
+										<button id="ussenate2map" class="btn btn-outline-primary btn-sm" title="View district"><span class="contact">District </span><i class="fas fa-map-marked-alt"></i></button>
 									</div>
-
-								</div>
 								
 							</div>
 						</div>
@@ -159,7 +154,7 @@
 					<i class="fa fa-chevron-right"> </i>
 				</div>
 		</nav>
-		<main role="main" class="col-md-8  pl-md-2 pr-md-0">
+		<main role="main" class="col-md-6 col-lg-8  pl-md-2 pr-md-0">
 				<a ><div id="triangle-topright"><i class="fa fa-map fa-lg"></i></div></a>
 				<div id="map_layers">
 					<div id="map_layers_content">

@@ -9,7 +9,7 @@ html,body
 main { height: 0; width: 100vw; }
 
 #legContainerMain{
-	overflow: hidden;
+    overflow: hidden;
 }
 
 #map{
@@ -19,63 +19,21 @@ main { height: 0; width: 100vw; }
     z-index: 0;
     cursor:crosshair;
 }
-/*override leg css*/
-.leg_PageContent{
-    max-height: 625px;
-    min-height:625px;
-    font-family: arial;
-    color:#495057;
-    /*margin:0;*/
-}
-.leg_PageContent li a{
-    color:#606060;
-}
-.leg_PageContent li a:hover{
-    background-color: #606060;
-    color:#fff;
-    padding:3px 3px 3px 5px;
-    border-radius:3px;
-} 
 
-.leg_PageFooter{
-    margin: 1em 0 0;
-}
-
-.leg_PageContent ul, .leg_PageContent ol {
-    margin-left: 2em;
-}
-.leg_PageContent a:focus{
-    background-color: #eee !important;
-}
-
-.leg_PageContent hr{
-    margin:10px;
-    height:1px;
-    background-color: #a7a5a6;
-}
-
-.leg_OfficeNavCore{
-    z-index: 3;
-}
-
-.leg_OfficeNavCore{
-    z-index: 3;
-}
-
-.leg_UseMobile .leg_PageFooter {
-    margin: 15px 0 0 0;
-
-}
 .mapboxgl-canvas-container.mapboxgl-interactive, .mapboxgl-ctrl-nav-compass{
     cursor:crosshair;
 }
 
 /*application css*/
 .contact{
-    color: #a54a36;
+    color: #2b6dad;
     font-size: 11px;
     font-style: italic;
     padding: 5px;
+}
+
+.contact:hover{
+    color:#fff;
 }
 
 .leaflet-div-icon{
@@ -121,7 +79,7 @@ main { height: 0; width: 100vw; }
     height: 100%;
     top: 0;
     width: 100%;
-    z-index: 1001;
+    z-index: 101;
      background-color: #f2f2f2;
     border-top: 1px solid #a7a5a6;
     border-right: 1px solid #a7a5a6;
@@ -225,8 +183,8 @@ ul{
     text-align: center;
 }
 .search{
-	z-index: 1;
-	width:100%;
+    z-index: 1;
+    width:100%;
     height:86px;
     /*margin-top:10px;*/
     left:25px;
@@ -269,24 +227,6 @@ ul{
     margin-top:3px;
 }
 
-/*.lcc_gis_member{
-    overflow:hidden;
-    width:200px;
-    white-space: nowrap;
-    position:relative;
-    font-weight: bold;
-    left:80px;
-    top:0px;
-    text-align: left;
-    z-index: 101;
-}*/
-
-/*.lcc_gis_memberdistrict{
-    position: relative;
-    left: 80px;
-    top:0;
-    text-align: left;
-}*/
 .member-info{
     margin-top:20px;
     margin-left:40px;
@@ -296,13 +236,13 @@ ul{
 }
 #housemember,#senatemember, #ushousemember, #ussenatemember, #ussenatemember2{
     /*margin-top:8px;*/
-    /*margin-left:35px;*/
-    text-align: center;  
+    margin-left:40px;
+    /*text-align: center;  */
 }
 #housedistrict, #senatedistrict, #ushousedistrict, #ussenatedistrict, #ussenatedistrict2{
     margin-top:2px;
-    /*margin-left:35px;*/
-    text-align: center;
+    margin-left:40px;
+    /*text-align: center;*/
 }
 
 .contact-info{
@@ -366,20 +306,6 @@ ul{
     z-index:3;
 }
 
-/*#map_reset .noref,#map_help .noref, #map_disclaimer .noref{
-     font-size: 11px;
-    padding:3px;
-}*/
-
-/*#map_reset .noref:hover,#map_help .noref:hover, #map_disclaimer .noref:hover{
-    cursor:pointer;
-    background-color: #725448;
-    color:#e6e6e6;
-    border-color:#e6e6e6;
-    padding:5px;
-    border-radius:3px;
-}*/
-
 #map_layers_toggle{
     color:#e6e6e6;
 }
@@ -388,12 +314,6 @@ ul{
     cursor:pointer;
     color:#8d8d8d;
 }
-
-/*#map_help{
-    font-size: 11px;
-    padding:3px;
-    z-index: 101;
-}*/
 
 #map_search_results_metadata{
     font-size: 11px;
@@ -674,7 +594,13 @@ ul{
 
   #mnhouselink, #mnsenlink, #ushouselink, #ussenatelink, #ussenate2link{
     padding: 0 5px;
+    width:78px;
   }
+
+  #mnhousemap, #mnsenmap, #ushousemap, #ussenatemap, #ussenate2map{
+    width:78px;
+  }
+ 
  
 /*Begin Responsive Web Design*/
 @media screen and (max-width: 767px) {

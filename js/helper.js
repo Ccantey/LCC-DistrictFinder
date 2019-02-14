@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(function (){
 	//kickoff map logic
     initialize();
 
@@ -12,11 +12,6 @@ $( document ).ready(function() {
 		slideSidebar();
 		ga('send', 'event', 'map', 'mapclick', 'identify');
 	});     
-
-    $('#leg_PageHeader_expand').click(function(e){
-    	$('.leg_PageHeader').toggle();
-        }
-    );
 
     // on small screens
 	$('#toggleSidebar').click(function(e){
@@ -43,10 +38,10 @@ $( document ).ready(function() {
     });
 
     // enter key event
-    $("#geocodeAddress").bind("keypress", {}, keypressInBox);
+    $("#geocodeAddress").on("keypress", {}, keypressInBox);
     
     // both key and enter fire geoCodeAddress
-    $('#searchButton').click(function(e){
+    $(document).on('click', '#searchButton', function(e){
     	e.preventDefault();
     	ga('send', 'event', 'geolocate', 'searchbutton', 'click');
     	address = document.getElementById('geocodeAddress').value;
@@ -76,8 +71,9 @@ $( document ).ready(function() {
 		// ga('send', 'event', 'member', 'showmapdistrict', 'click');
 
         grandma.addClass('active').siblings().removeClass('active');
+        console.log(grandma)
         //get static minnesota geojson (faster than php)
-		if (this.id == 'ussenatelink' || this.id == 'ussenate2link'){
+		if (this.id == 'ussenatemap' || this.id == 'ussenate2map'){
 		  	if(typeof MinnesotaBoundaryLayer === 'undefined'){
 					$.getJSON("./data/Minnesota2015.json", function(data) {
 						var myStyle = {

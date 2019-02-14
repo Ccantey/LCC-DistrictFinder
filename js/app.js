@@ -136,7 +136,7 @@ function geoCodeAddress(geocoder, resultsMap, address) {
       addMarker(pos);
       identifyDistrict(pos);
       geocodeFeedback(precision, components);
-      console.log("used google")
+      // console.log("used google")
     } else {
       
       geoCodeMBAddress(address);
@@ -409,6 +409,7 @@ function zoomToGPSLocation() {
     handleLocationError(false, infoWindow, map.getCenter());
   }
 }
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
  alert('Geocode was not successful - Your browser does not support Geolocation');
       $('.loader').hide();

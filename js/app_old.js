@@ -34,7 +34,7 @@ function initialize(){
 					 zIndex: 1,
 					attribution: 'Basemap data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
 						'Legislative data &copy; <a href="http://www.gis.leg.mn/">LCC-GIS</a>, ' +
-						'Imagery Â© <a href="http://mapbox.com">Mapbox</a>',
+						'Imagery Ã‚Â© <a href="http://mapbox.com">Mapbox</a>',
 					id: 'mapbox.streets'
 					}).addTo(map);
 
@@ -44,7 +44,7 @@ function initialize(){
 					 zIndex: 1,
 					attribution: 'Basemap data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
 						'Legislative data &copy; <a href="http://www.gis.leg.mn/">LCC-GIS</a>, ' +
-						'Imagery Â© <a href="http://mapbox.com">Mapbox</a>',
+						'Imagery Ã‚Â© <a href="http://mapbox.com">Mapbox</a>',
 					id: 'mapbox.streets-satellite'
 					})
 
@@ -201,15 +201,15 @@ function addMemberData(memberData){
 	    $('.memberLink').show();
 	    //add memberdata from map selection to member list
 	    //ALTERNATIVE SOLUTION! Use house/senate image server: http://www.house.leg.state.mn.us/hinfo/memberimgls89/ -- but then you have issue of large image sizes, slow performance
-	    $('#housephoto').attr('src', 'images/House/tn_'+memberData.features[0].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'Minnesota House ' + memberData.features[0].properties.party +' '+ memberData.features[0].properties.name + ' district ' + memberData.features[0].properties.district);
+	    $('#housephoto').attr('src', 'images/HouseOld/tn_'+memberData.features[0].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'Minnesota House ' + memberData.features[0].properties.party +' '+ memberData.features[0].properties.name + ' district ' + memberData.features[0].properties.district);
 		$('#housemember').html(memberData.features[0].properties.name + '<span class="party"> ('+ memberData.features[0].properties.party +')</span>').delay("slow").fadeIn();
 		$('#housedistrict').html('MN House - ' + memberData.features[0].properties.district).delay("slow").fadeIn();
-		$('#mnhouselink').attr('href', 'http://www.house.leg.state.mn.us/members/members.asp?id='+ memberData.features[0].properties.memid);
+		$('.mnhouse').attr('data-webid', 'http://www.house.leg.state.mn.us/members/members.asp?id='+ memberData.features[0].properties.memid);
 		
 		$('#senatephoto').attr('src', 'images/Senate/'+memberData.features[1].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'Minnesota Senate ' + memberData.features[1].properties.party +' '+ memberData.features[1].properties.name + ' district ' + memberData.features[1].properties.district);
 		$('#senatemember').html(memberData.features[1].properties.name + '<span class="party">  ('+memberData.features[1].properties.party+')</span>');
 		$('#senatedistrict').html('MN Senate - ' + memberData.features[1].properties.district);
-		$('#mnsenlink').attr('href', 'http://www.senate.leg.state.mn.us/members/member_bio.php?leg_id='+ memberData.features[1].properties.memid);
+		$('.mnsenate').attr('data-webid', 'http://www.senate.leg.state.mn.us/members/member_bio.php?leg_id='+ memberData.features[1].properties.memid);
 		
 
 		var ushouseURL = '';
@@ -226,21 +226,21 @@ function addMemberData(memberData){
         	  ushouseURL = lastname;
         }
         
-		$('#ushousephoto').attr('src', 'images/USHouse/US'+memberData.features[2].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Representative ' + memberData.features[2].properties.party +' '+ memberData.features[2].properties.name + ' district ' + memberData.features[2].properties.district);
+		$('#ushousephoto').attr('src', 'images/USHouseOld/US'+memberData.features[2].properties.district+'.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Representative ' + memberData.features[2].properties.party +' '+ memberData.features[2].properties.name + ' district ' + memberData.features[2].properties.district);
 		$('#ushousemember').html(memberData.features[2].properties.name + ' <span class="party"> ('+memberData.features[2].properties.party+')</span>');
 		$('#ushousedistrict').html('U.S. House - ' + memberData.features[2].properties.district);
 		var lastname = memberData.features[2].properties.name.split(" ")[1];
-		$('#ushouselink').attr('href', 'http://'+ ushouseURL +'.house.gov/');
+		$('.ushouse').attr('data-webid', 'http://'+ ushouseURL +'.house.gov/');
 		
 		$('#ussenatephoto').attr('src', 'images/USSenate/USsenate1.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Senator DFL Amy Klobuchar Minnesota');
 		$('#ussenatemember').html('Amy Klobuchar <span class="party"> (DFL)</span>');
 		$('#ussenatedistrict').html('U.S. Senate' );
-		$('.ussenate1').attr('href', 'http://www.klobuchar.senate.gov/');
+		$('.ussenate1').attr('data-webid', 'http://www.klobuchar.senate.gov/');
 		
 		$('#ussenatephoto2').attr('src', 'images/USSenate/USsenate2.jpg').attr('width','auto').attr('height','auto').attr('alt', 'United States Senator DFL Tina Smith Minnesota');
 		$('#ussenatemember2').html('Tina Smith <span class="party"> (DFL)</span>');
 		$('#ussenatedistrict2').html('U.S. Senate');
-		$('.ussenate2').attr('href', 'https://www.smith.senate.gov/HomePage');
+		$('.ussenate2').attr('data-webid', 'https://www.smith.senate.gov/HomePage');
 		$('.loader').hide();
 	} else { 
 		$('#mask').show();
@@ -373,4 +373,3 @@ function toggleLayerSwitches (){
         }         
     }	
 }
-
