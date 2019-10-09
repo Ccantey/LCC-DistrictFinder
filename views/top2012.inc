@@ -426,7 +426,7 @@
                     <ul>             
                         <li><h3>House</h3></li>
                         
-                            <li><a href="http://www.house.leg.state.mn.us/htv/mnhouse.asx">Live Video</a></li> 
+                            <li><a href="http://www.house.leg.state.mn.us/live/1">Live Video</a></li> 
                         <li><a href="http://www.house.leg.state.mn.us/htv/schedule.asp">Webcast Schedule</a></li>                        
                         <li><a href="http://www.house.leg.state.mn.us/audio/default.asp">Audio &amp; Video Archives</a></li> 
                         <li><a href="http://www.house.leg.state.mn.us/hinfo/sdaily.asp">Session Daily</a></li>
@@ -436,7 +436,7 @@
                         <li><h3>Senate</h3></li>
                         <li ><a href="http://www.senate.leg.state.mn.us/senate_video.php?ls=&media_type=flv" class="leg_HiddenMobile">Live Video</a> 
                             <a href="http://stream1.video.state.mn.us:8080/m3ugen/broadcast/Senatemobile.3gp" class="leg_HiddenNonmobile">Live Video</a></li>
-                        <li><a href="http://www.senate.mn/media/media_coming_up.php?ls=">Webcast Schedule</a></li>
+                        <li><a href="http://www.senate.mn/media/media_coming_up.php">Webcast Schedule</a></li>
                         <li><a href="http://www.senate.mn/media/index.php?ls=&type=audio">Audio Archives</a></li>
                         <li><a href="http://www.senate.mn/media/index.php?ls=&type=video">Video Archives</a></li>
                         <li><a href="http://www.senate.mn/media/media_photos.php">Photos</a></li>

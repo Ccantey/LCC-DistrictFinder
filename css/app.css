@@ -595,7 +595,7 @@ ul{
 
   #mnhouselink, #mnsenlink, #ushouselink, #ussenatelink, #ussenate2link{
     padding: 0 5px;
-    width:78px;
+    /*width:100%;*/
   }
 
   #mnhousemap, #mnsenmap, #ushousemap, #ussenatemap, #ussenate2map{

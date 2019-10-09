@@ -46,7 +46,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" /> -->
-  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+  <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/app.css" />
   <script src="js/app.js"></script>
   <script src="js/helper.js"></script>
@@ -54,7 +54,7 @@
     <!--uses Google JS APi -not geocoding API -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAPiQ_pNX0vOYz5w04VSn0WUTS_5knWOg" > 
   </script>
-  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
   <link rel="stylesheet" href="css/plugins/leaflet-gesture-handling.min.css" type="text/css">
 <script src="js/plugins/leaflet-gesture-handling.min.js"></script>
 
@@ -66,7 +66,7 @@
         FB.init({
           appId      : '1837822423128844',
           xfbml      : true,
-          version    : 'v2.8'
+          version    : 'v3.2'
         });
         FB.AppEvents.logPageView();
       };
@@ -544,7 +544,7 @@
                               <!-- <h2 class="text-white">Minnesota House of Representatives</h2> -->
                               <dl>
                                 <dt class="text-white">House</dt>
-                                <dd><a href="http://www.house.leg.state.mn.us/htv/mnhouse.asx">Live Video</a></dd>
+                                <dd><a href="http://www.house.leg.state.mn.us/live/1">Live Video</a></dd>
                                 <dd><a href="http://www.house.leg.state.mn.us/htv/schedule.asp">Webcast Schedule</a></dd>
                                 <dd><a href="http://www.house.leg.state.mn.us/audio/default.asp">Audio &amp; Video Archives</a></dd>
                                 <dd><a href="http://www.house.leg.state.mn.us/hinfo/sdaily.asp">Session Daily</a></dd>
@@ -557,7 +557,7 @@
                                 <dd>
                                   <a href="http://mnsenate.granicus.com/ViewPublisher.php?view_id=1">Live Video</a> 
                                 </dd>
-                                <dd><a href="http://www.senate.mn/media/media_coming_up.php?ls=">Webcast Schedule</a></dd>
+                                <dd><a href="http://www.senate.mn/media/media_coming_up.php">Webcast Schedule</a></dd>
                                 <dd><a href="http://www.senate.mn/media/index.php?ls=&type=audio">Audio Archives</a></dd>
                                 <dd><a href="http://www.senate.mn/media/index.php?ls=&type=video">Video Archives</a></dd>
                                 <dd><a href="http://www.senate.mn/media/media_photos.php">Photos</a></dd>
